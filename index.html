@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brain Vault</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #f5f2eb;
+    --bg-grid: #e8e4dc;
+    --bg-card: #ffffff;
+    --bg-card-hover: #fafaf8;
+    --border: #ddd8ce;
+    --border-light: #eae6dd;
+    --text: #1a1a1a;
+    --text-secondary: #555550;
+    --text-muted: #8a8880;
+    --accent: #c43d2e;
+    --accent-dim: rgba(196, 61, 46, 0.08);
+    --serif: 'Instrument Serif', 'Georgia', serif;
+    --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--sans);
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(var(--bg-grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--bg-grid) 1px, transparent 1px);
+    background-size: 60px 60px;
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---- Nav ---- */
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(245, 242, 235, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav-brand {
+    font-family: var(--serif);
+    font-size: 22px;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.3px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    transition: color 0.2s;
+    position: relative;
+  }
+
+  .nav-link:hover { color: var(--text); }
+
+  .nav-link.active {
+    color: var(--text);
+  }
+
+  .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  .nav-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .nav-search:hover { color: var(--text); }
+
+  .nav-search kbd {
+    font-family: var(--sans);
+    font-size: 11px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 5px;
+    color: var(--text-muted);
+  }
+
+  /* ---- Hero ---- */
+  .hero {
+    text-align: center;
+    padding: 100px 24px 80px;
+  }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(64px, 10vw, 120px);
+    font-weight: 400;
+    color: var(--text);
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    color: var(--text-muted);
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  /* ---- Controls ---- */
+  .controls-bar {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .filter-pill {
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: var(--sans);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .filter-pill:hover {
+    border-color: var(--text-muted);
+    color: var(--text);
+  }
+
+  .filter-pill.active {
+    background: var(--text);
+    border-color: var(--text);
+    color: var(--bg-card);
+  }
+
+  .pill-count {
+    font-size: 11px;
+    opacity: 0.6;
+    margin-left: 3px;
+  }
+
+  .sort-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .sort-control select {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  /* ---- Search overlay ---- */
+  .search-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 200;
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 120px;
+  }
+
+  .search-overlay.open { display: flex; }
+
+  .search-box {
+    background: var(--bg-card);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 560px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.2);
+    overflow: hidden;
+  }
+
+  .search-input-wrap {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    gap: 12px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .search-input-wrap svg { color: var(--text-muted); flex-shrink: 0; }
+
+  .search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: var(--sans);
+    font-size: 16px;
+    color: var(--text);
+    background: transparent;
+  }
+
+  .search-input::placeholder { color: var(--text-muted); }
+
+  .search-results {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 8px;
+  }
+
+  .search-result-item {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text);
+    transition: background 0.15s;
+  }
+
+  .search-result-item:hover { background: var(--bg); }
+
+  .search-result-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  .search-result-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+
+  .search-empty {
+    padding: 32px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+
+  .search-hint {
+    padding: 10px 16px;
+    font-size: 12px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-light);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .search-hint kbd {
+    font-family: var(--sans);
+    font-size: 11px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 5px;
+  }
+
+  /* ---- Cards Grid ---- */
+  .content {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 40px 100px;
+  }
+
+  .month-group {
+    margin-bottom: 48px;
+  }
+
+  .month-label {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    padding-left: 4px;
+  }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card:hover {
+    border-color: var(--border);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    transform: translateY(-3px);
+  }
+
+  .card-head {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+
+  .card-category {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--accent);
+    background: var(--accent-dim);
+    padding: 3px 10px;
+    border-radius: 4px;
+  }
+
+  .card-source {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: rgba(0,0,0,0.04);
+    padding: 3px 10px;
+    border-radius: 4px;
+  }
+
+  .card-date {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-left: auto;
+  }
+
+  .card-title {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.35;
+    margin-bottom: 8px;
+    flex-grow: 0;
+  }
+
+  .card-title a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .card-title a:hover { color: var(--accent); }
+
+  .card-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    flex-grow: 1;
+  }
+
+  .card-note {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--text-secondary);
+    border-left: 2px solid var(--border);
+    padding: 4px 12px;
+    margin-top: 12px;
+  }
+
+  .card-note::before {
+    content: '✎ ';
+    opacity: 0.5;
+  }
+
+  .card-footer {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  .card-url {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .card-url a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .card-url a:hover { color: var(--accent); }
+
+  /* ---- Stats ---- */
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    padding: 32px 24px;
+    margin-bottom: 16px;
+  }
+
+  .stat { text-align: center; }
+
+  .stat-value {
+    font-family: var(--serif);
+    font-size: 36px;
+    color: var(--text);
+    line-height: 1.1;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 4px;
+  }
+
+  /* ---- Empty / No results ---- */
+  .empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--text-muted);
+  }
+
+  .empty-state-icon { font-size: 48px; margin-bottom: 12px; }
+
+  .no-results {
+    text-align: center;
+    padding: 64px 20px;
+    color: var(--text-muted);
+    font-size: 15px;
+    display: none;
+  }
+
+  /* ---- Footer ---- */
+  .footer {
+    text-align: center;
+    padding: 32px;
+    font-size: 13px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+  }
+
+  /* ---- Animations ---- */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .card { animation: fadeUp 0.35s ease both; }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 768px) {
+    .nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    .hero { padding: 60px 20px 40px; }
+    .hero h1 { font-size: 56px; }
+    .controls-bar { flex-direction: column; align-items: flex-start; gap: 12px; padding: 0 20px; }
+    .content { padding: 0 20px 60px; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .stats-row { gap: 24px; }
+    .stat-value { font-size: 28px; }
+    .card-date { margin-left: 0; }
+  }
+
+  /* ---- Scrollbar ---- */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav">
+  <a href="#" class="nav-brand">Brain Vault</a>
+  <div class="nav-links">
+    <div class="nav-search" id="open-search">
+      SEARCH
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <kbd>⌘</kbd><kbd>K</kbd>
+    </div>
+    <a href="#" class="nav-link active">Articles</a>
+    <a href="https://github.com" class="nav-link" target="_blank">GitHub</a>
+  </div>
+</nav>
+
+<!-- Search overlay -->
+<div class="search-overlay" id="search-overlay">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" class="search-input" id="search-input" placeholder="Search articles..." autocomplete="off">
+    </div>
+    <div class="search-results" id="search-results"></div>
+    <div class="search-hint">
+      <span>Navigate with ↑↓ · Open with ↵</span>
+      <span><kbd>esc</kbd> to close</span>
+    </div>
+  </div>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+  <h1>Brain Vault</h1>
+  <p class="hero-sub">A curated collection of interesting reads, saved & organized with AI.</p>
+</div>
+
+<!-- Stats -->
+<div class="stats-row">
+  <div class="stat"><div class="stat-value" id="total-count">0</div><div class="stat-label">Articles</div></div>
+  <div class="stat"><div class="stat-value" id="category-count">0</div><div class="stat-label">Categories</div></div>
+  <div class="stat"><div class="stat-value" id="source-count">0</div><div class="stat-label">Sources</div></div>
+</div>
+
+<!-- Controls -->
+<div class="controls-bar">
+  <div class="filters" id="filters"></div>
+  <div class="sort-control">
+    Sort by:
+    <select id="sort-select">
+      <option value="date">Date</option>
+      <option value="title">Title</option>
+      <option value="source">Source</option>
+    </select>
+  </div>
+</div>
+
+<!-- Cards -->
+<div class="content">
+  <div id="articles-container"></div>
+  <div class="no-results" id="no-results">No articles match your filter.</div>
+</div>
+
+<div class="footer">Brain Vault — articles saved with Claude AI</div>
+
+<script>
+(async function() {
+  let articles = [];
+  try {
+    const resp = await fetch('data.json');
+    const data = await resp.json();
+    articles = data.articles || [];
+  } catch {
+    document.getElementById('articles-container').innerHTML =
+      '<div class="empty-state"><div class="empty-state-icon">📭</div><p>No articles yet.</p></div>';
+    return;
+  }
+
+  if (!articles.length) {
+    document.getElementById('articles-container').innerHTML =
+      '<div class="empty-state"><div class="empty-state-icon">📭</div><p>No articles yet.</p></div>';
+    return;
+  }
+
+  // Stats
+  const categories = [...new Set(articles.map(a => a.category))];
+  const sources = [...new Set(articles.map(a => a.source))];
+  document.getElementById('total-count').textContent = articles.length;
+  document.getElementById('category-count').textContent = categories.length;
+  document.getElementById('source-count').textContent = sources.length;
+
+  // Filters
+  let activeCategory = null;
+  const filtersEl = document.getElementById('filters');
+  const catCounts = {};
+  articles.forEach(a => catCounts[a.category] = (catCounts[a.category] || 0) + 1);
+  const sortedCats = categories.sort((a, b) => catCounts[b] - catCounts[a]);
+
+  addPill('All', articles.length, true);
+  sortedCats.forEach(c => addPill(c, catCounts[c], false));
+
+  function addPill(label, count, active) {
+    const btn = document.createElement('button');
+    btn.className = 'filter-pill' + (active ? ' active' : '');
+    btn.innerHTML = label + `<span class="pill-count">${count}</span>`;
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      activeCategory = label === 'All' ? null : label;
+      render();
+    });
+    filtersEl.appendChild(btn);
+  }
+
+  // Sort
+  let sortBy = 'date';
+  document.getElementById('sort-select').addEventListener('change', e => {
+    sortBy = e.target.value;
+    render();
+  });
+
+  // Helpers
+  function fmtDate(d) {
+    try { return new Date(d + 'T00:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }); }
+    catch { return d; }
+  }
+  function monthKey(d) {
+    try { return new Date(d + 'T00:00:00').toLocaleDateString('en-GB', { month: 'long', year: 'numeric' }); }
+    catch { return 'Unknown'; }
+  }
+  function truncUrl(u) {
+    try { const p = new URL(u); return p.hostname + (p.pathname.length > 45 ? p.pathname.slice(0,45)+'…' : p.pathname); }
+    catch { return u; }
+  }
+  function esc(t) { const d = document.createElement('div'); d.textContent = t; return d.innerHTML; }
+
+  function render() {
+    let list = activeCategory ? articles.filter(a => a.category === activeCategory) : [...articles];
+
+    if (sortBy === 'title') list.sort((a, b) => a.title.localeCompare(b.title));
+    else if (sortBy === 'source') list.sort((a, b) => a.source.localeCompare(b.source));
+    else list.sort((a, b) => b.date.localeCompare(a.date));
+
+    const container = document.getElementById('articles-container');
+    const noRes = document.getElementById('no-results');
+
+    if (!list.length) { container.innerHTML = ''; noRes.style.display = 'block'; return; }
+    noRes.style.display = 'none';
+
+    // Group by month
+    const groups = {};
+    list.forEach(a => { const m = monthKey(a.date); (groups[m] = groups[m] || []).push(a); });
+
+    let html = '';
+    let idx = 0;
+    Object.entries(groups).forEach(([month, arts]) => {
+      html += `<div class="month-group"><div class="month-label">${esc(month)}</div><div class="cards-grid">`;
+      arts.forEach(a => {
+        const delay = Math.min(idx * 0.05, 0.5);
+        html += `
+        <div class="card" style="animation-delay:${delay}s">
+          <div class="card-head">
+            <span class="card-category">${esc(a.category)}</span>
+            <span class="card-source">${esc(a.source)}</span>
+            <span class="card-date">${fmtDate(a.date)}</span>
+          </div>
+          <div class="card-title"><a href="${esc(a.url)}" target="_blank" rel="noopener">${esc(a.title)}</a></div>
+          ${a.description ? `<div class="card-desc">${esc(a.description)}</div>` : ''}
+          ${a.note ? `<div class="card-note">${esc(a.note)}</div>` : ''}
+          <div class="card-footer"><div class="card-url"><a href="${esc(a.url)}" target="_blank">${esc(truncUrl(a.url))}</a></div></div>
+        </div>`;
+        idx++;
+      });
+      html += '</div></div>';
+    });
+    container.innerHTML = html;
+  }
+
+  render();
+
+  // ---- Search (⌘K) ----
+  const overlay = document.getElementById('search-overlay');
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+
+  function openSearch() { overlay.classList.add('open'); searchInput.value = ''; searchInput.focus(); renderSearchResults(''); }
+  function closeSearch() { overlay.classList.remove('open'); }
+
+  document.getElementById('open-search').addEventListener('click', openSearch);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeSearch(); });
+
+  document.addEventListener('keydown', e => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); openSearch(); }
+    if (e.key === 'Escape') closeSearch();
+  });
+
+  let searchIdx = -1;
+  searchInput.addEventListener('input', () => { searchIdx = -1; renderSearchResults(searchInput.value.trim().toLowerCase()); });
+  searchInput.addEventListener('keydown', e => {
+    const items = searchResults.querySelectorAll('.search-result-item');
+    if (e.key === 'ArrowDown') { e.preventDefault(); searchIdx = Math.min(searchIdx + 1, items.length - 1); highlightSearch(items); }
+    if (e.key === 'ArrowUp') { e.preventDefault(); searchIdx = Math.max(searchIdx - 1, 0); highlightSearch(items); }
+    if (e.key === 'Enter' && items[searchIdx]) { items[searchIdx].click(); closeSearch(); }
+  });
+
+  function highlightSearch(items) {
+    items.forEach((it, i) => it.style.background = i === searchIdx ? 'var(--bg)' : '');
+  }
+
+  function renderSearchResults(q) {
+    if (!q) { searchResults.innerHTML = '<div class="search-empty">Start typing to search…</div>'; return; }
+    const matched = articles.filter(a =>
+      [a.title, a.description, a.category, a.source, a.note, a.url].join(' ').toLowerCase().includes(q)
+    ).slice(0, 8);
+
+    if (!matched.length) { searchResults.innerHTML = '<div class="search-empty">No results found</div>'; return; }
+    searchResults.innerHTML = matched.map(a => `
+      <a class="search-result-item" href="${esc(a.url)}" target="_blank">
+        <div class="search-result-title">${esc(a.title)}</div>
+        <div class="search-result-meta">${esc(a.category)} · ${esc(a.source)} · ${fmtDate(a.date)}</div>
+      </a>
+    `).join('');
+  }
+})();
+</script>
+</body>
+</html>

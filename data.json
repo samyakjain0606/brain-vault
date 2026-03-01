@@ -1,0 +1,55 @@
+{
+  "articles": [
+    {
+      "title": "Attention Is All You Need — The Transformer Paper Explained",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "description": "The foundational paper that introduced the Transformer architecture, replacing RNNs with self-attention for sequence modeling.",
+      "category": "AI & Machine Learning",
+      "source": "arXiv",
+      "date": "2026-02-28",
+      "note": "Must-read for understanding modern LLMs",
+      "file": "ai-and-ml.md"
+    },
+    {
+      "title": "Building a Second Brain: A Proven Method to Organize Your Digital Life",
+      "url": "https://fortelabs.com/blog/basboverview/",
+      "description": "Tiago Forte's framework for capturing, organizing, and sharing knowledge using digital tools. The CODE methodology: Capture, Organize, Distill, Express.",
+      "category": "Productivity",
+      "source": "fortelabs.com",
+      "date": "2026-02-27",
+      "note": "",
+      "file": "productivity.md"
+    },
+    {
+      "title": "How React Server Components Work Under the Hood",
+      "url": "https://vercel.com/blog/understanding-react-server-components",
+      "description": "Deep dive into React Server Components — how they reduce client-side JS, enable streaming, and change the mental model for data fetching.",
+      "category": "Web Development",
+      "source": "vercel.com",
+      "date": "2026-02-26",
+      "note": "Good reference for the RSC migration",
+      "file": "web-development.md"
+    },
+    {
+      "title": "Show HN: I built a local-first sync engine",
+      "url": "https://news.ycombinator.com/item?id=12345678",
+      "description": "A developer shares their approach to building a CRDT-based sync engine that works offline-first with eventual consistency.",
+      "category": "Web Development",
+      "source": "Hacker News",
+      "date": "2026-02-25",
+      "note": "",
+      "file": "web-development.md"
+    },
+    {
+      "title": "The Bitter Lesson by Rich Sutton",
+      "url": "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+      "description": "Rich Sutton argues that general methods leveraging computation are ultimately the most effective in AI, rather than human-designed features.",
+      "category": "AI & Machine Learning",
+      "source": "incompleteideas.net",
+      "date": "2026-02-24",
+      "note": "Classic essay. Explains why scaling works.",
+      "file": "ai-and-ml.md"
+    }
+  ],
+  "lastUpdated": "2026-02-28T23:30:00"
+}
