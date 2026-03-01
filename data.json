@@ -1,55 +1,55 @@
 {
   "articles": [
     {
-      "title": "Attention Is All You Need — The Transformer Paper Explained",
-      "url": "https://arxiv.org/abs/1706.03762",
-      "description": "The foundational paper that introduced the Transformer architecture, replacing RNNs with self-attention for sequence modeling.",
-      "category": "AI & Machine Learning",
-      "source": "arXiv",
+      "title": "What's so hard about continuous learning?",
+      "url": "https://www.seangoedecke.com/continuous-learning/",
+      "description": "Explores why continuous learning is difficult in practice and what makes sustained skill development challenging for software engineers.",
+      "category": "Work & Productivity",
+      "source": "seangoedecke.com",
+      "date": "2026-03-01",
+      "note": "",
+      "file": "work-and-productivity.md"
+    },
+    {
+      "title": "pi/extensions at main · espennilsen/pi",
+      "url": "https://github.com/espennilsen/pi/tree/main/extensions",
+      "description": "Collection of extensions for the pi coding agent — useful reference for building custom pi extensions.",
+      "category": "Software Development",
+      "source": "GitHub",
+      "date": "2026-03-01",
+      "note": "",
+      "file": "software-development.md"
+    },
+    {
+      "title": "How to Get New Ideas",
+      "url": "https://paulgraham.com/getideas.html",
+      "description": "Paul Graham on how new ideas arise — through the intersection of preparation, curiosity, and allowing yourself to notice things others overlook.",
+      "category": "Entrepreneurship & Ideas",
+      "source": "paulgraham.com",
       "date": "2026-02-28",
-      "note": "Must-read for understanding modern LLMs",
-      "file": "ai-and-ml.md"
+      "note": "Paul Graham's Article",
+      "file": "entrepreneurship-and-ideas.md"
     },
     {
-      "title": "Building a Second Brain: A Proven Method to Organize Your Digital Life",
-      "url": "https://fortelabs.com/blog/basboverview/",
-      "description": "Tiago Forte's framework for capturing, organizing, and sharing knowledge using digital tools. The CODE methodology: Capture, Organize, Distill, Express.",
-      "category": "Productivity",
-      "source": "fortelabs.com",
-      "date": "2026-02-27",
+      "title": "How to Do Great Work",
+      "url": "https://paulgraham.com/greatwork.html",
+      "description": "Paul Graham's comprehensive essay on what it takes to do exceptional work — finding what to work on, maintaining motivation, and developing taste.",
+      "category": "Work & Productivity",
+      "source": "paulgraham.com",
+      "date": "2026-02-28",
       "note": "",
-      "file": "productivity.md"
+      "file": "work-and-productivity.md"
     },
     {
-      "title": "How React Server Components Work Under the Hood",
-      "url": "https://vercel.com/blog/understanding-react-server-components",
-      "description": "Deep dive into React Server Components — how they reduce client-side JS, enable streaming, and change the mental model for data fetching.",
-      "category": "Web Development",
-      "source": "vercel.com",
-      "date": "2026-02-26",
-      "note": "Good reference for the RSC migration",
-      "file": "web-development.md"
-    },
-    {
-      "title": "Show HN: I built a local-first sync engine",
-      "url": "https://news.ycombinator.com/item?id=12345678",
-      "description": "A developer shares their approach to building a CRDT-based sync engine that works offline-first with eventual consistency.",
-      "category": "Web Development",
-      "source": "Hacker News",
-      "date": "2026-02-25",
+      "title": "When To Do What You Love",
+      "url": "https://paulgraham.com/when.html",
+      "description": "Paul Graham on the right timing for pursuing passion-driven work versus practical considerations at different life stages.",
+      "category": "Work & Productivity",
+      "source": "paulgraham.com",
+      "date": "2026-02-28",
       "note": "",
-      "file": "web-development.md"
-    },
-    {
-      "title": "The Bitter Lesson by Rich Sutton",
-      "url": "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
-      "description": "Rich Sutton argues that general methods leveraging computation are ultimately the most effective in AI, rather than human-designed features.",
-      "category": "AI & Machine Learning",
-      "source": "incompleteideas.net",
-      "date": "2026-02-24",
-      "note": "Classic essay. Explains why scaling works.",
-      "file": "ai-and-ml.md"
+      "file": "work-and-productivity.md"
     }
   ],
-  "lastUpdated": "2026-02-28T23:30:00"
+  "lastUpdated": "2026-03-01T15:30:00"
 }
