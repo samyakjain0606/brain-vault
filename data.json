@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "title": "The Brand Age",
+      "url": "https://paulgraham.com/brandage.html",
+      "description": "Paul Graham on how we've entered an era where brands matter more than ever, and what that means for startups and founders.",
+      "category": "Entrepreneurship & Ideas",
+      "source": "paulgraham.com",
+      "date": "2026-03-06",
+      "note": "",
+      "file": "entrepreneurship-and-ideas.md"
+    },
+    {
       "title": "What's so hard about continuous learning?",
       "url": "https://www.seangoedecke.com/continuous-learning/",
       "description": "Explores why continuous learning is difficult in practice and what makes sustained skill development challenging for software engineers.",
