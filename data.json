@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "title": "Steal Any Writing Style with AI in 3 Steps",
+      "url": "https://x.com/heyrobinai/status/2029171055407849823?s=20",
+      "description": "A quick 3-step framework for using AI to replicate any writing style — useful for content creators and marketers.",
+      "category": "AI & ML",
+      "source": "Twitter/X",
+      "date": "2026-03-06",
+      "note": "steal any writing style with ai in 3 steps",
+      "file": "ai-and-ml.md"
+    },
+    {
       "title": "How to Work Hard",
       "url": "https://paulgraham.com/hwh.html",
       "description": "Great work requires natural ability, practice, and hard effort — all three. Paul Graham reflects on what separates good work from truly great work.",
@@ -71,5 +81,5 @@
       "file": "work-and-productivity.md"
     }
   ],
-  "lastUpdated": "2026-03-06T21:15:44.457566"
+  "lastUpdated": "2026-03-06T21:19:58.963637"
 }
