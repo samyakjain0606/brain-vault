@@ -26,3 +26,16 @@
 
 
 ---
+
+---
+
+### [How to Work Hard](https://paulgraham.com/hwh.html)
+> Great work requires natural ability, practice, and hard effort — all three. Paul Graham reflects on what separates good work from truly great work.
+
+| | |
+|---|---|
+| **Source** | paulgraham.com |
+| **Saved** | 6 Mar 2026 |
+
+
+---
