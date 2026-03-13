@@ -12,3 +12,14 @@
 | **Note** | steal any writing style with ai in 3 steps |
 
 ---
+
+### [Random Labs](https://randomlabs.ai/blog/slate)
+> Blog post from Random Labs exploring AI research and experimental tools via their Slate project.
+
+| | |
+|---|---|
+| **Source** | randomlabs.ai |
+| **Saved** | 13 Mar 2026 |
+
+
+---
