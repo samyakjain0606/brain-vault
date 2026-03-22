@@ -1,6 +1,16 @@
 {
   "bookmarks": [
     {
+      "id": "1774188096067",
+      "url": "https://www.typeui.sh/",
+      "name": "typeui.sh - Design Layer for Agentic Tooling",
+      "tags": [
+        "typeui"
+      ],
+      "source": "typeui.sh",
+      "date": "2026-03-22"
+    },
+    {
       "id": "1774179626541",
       "url": "https://github.com/dkyazzentwatwa/chatgpt-skills/tree/main",
       "name": "GitHub - dkyazzentwatwa/chatgpt-skills: My comprehensive, tested + audited, library of skills to use for ChatGPT. · GitHub",
@@ -31,5 +41,5 @@
       "date": "2026-03-22"
     }
   ],
-  "lastUpdated": "2026-03-22T17:10:26.542027"
+  "lastUpdated": "2026-03-22T19:31:36.068441"
 }
