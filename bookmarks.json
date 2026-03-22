@@ -1,0 +1,35 @@
+{
+  "bookmarks": [
+    {
+      "id": "1774179626541",
+      "url": "https://github.com/dkyazzentwatwa/chatgpt-skills/tree/main",
+      "name": "GitHub - dkyazzentwatwa/chatgpt-skills: My comprehensive, tested + audited, library of skills to use for ChatGPT. · GitHub",
+      "tags": [
+        "github"
+      ],
+      "source": "GitHub",
+      "date": "2026-03-22"
+    },
+    {
+      "id": "1774179417489",
+      "url": "https://www.svgrepo.com/",
+      "name": "cool svgs",
+      "tags": [
+        "svgrepo"
+      ],
+      "source": "svgrepo.com",
+      "date": "2026-03-22"
+    },
+    {
+      "id": "1774179343416",
+      "url": "https://docs.python.org/3/library/asyncio.html",
+      "name": "asyncio docs",
+      "tags": [
+        "python"
+      ],
+      "source": "docs.python.org",
+      "date": "2026-03-22"
+    }
+  ],
+  "lastUpdated": "2026-03-22T17:10:26.542027"
+}
