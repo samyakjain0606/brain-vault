@@ -520,6 +520,102 @@
     .card-date { margin-left: 0; }
   }
 
+  /* ---- Sites Grid ---- */
+  .sites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 14px;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 40px 100px;
+  }
+
+  .site-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 20px 22px;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    text-decoration: none;
+    color: inherit;
+    animation: fadeUp 0.35s ease both;
+  }
+
+  .site-card:hover {
+    border-color: var(--border);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    transform: translateY(-3px);
+  }
+
+  .site-favicon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    background: var(--bg);
+  }
+
+  .site-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .site-name {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1.3;
+    margin-bottom: 4px;
+    transition: color 0.2s;
+  }
+
+  .site-card:hover .site-name { color: var(--accent); }
+
+  .site-url {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+  }
+
+  .site-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .site-tag {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #3a7d5c;
+    background: rgba(58, 125, 92, 0.08);
+    padding: 2px 9px;
+    border-radius: 4px;
+  }
+
+  .site-source {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-muted);
+    background: rgba(0,0,0,0.04);
+    padding: 2px 9px;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 768px) {
+    .sites-grid { grid-template-columns: 1fr; padding: 0 20px 60px; }
+  }
+
   /* ---- Scrollbar ---- */
   ::-webkit-scrollbar { width: 8px; }
   ::-webkit-scrollbar-track { background: transparent; }
@@ -537,7 +633,8 @@
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       <kbd>⌘</kbd><kbd>K</kbd>
     </div>
-    <a href="#" class="nav-link active">Articles</a>
+    <a href="#" class="nav-link active" data-view="articles">Articles</a>
+    <a href="#" class="nav-link" data-view="sites">Sites</a>
     <a href="https://github.com" class="nav-link" target="_blank">GitHub</a>
   </div>
 </nav>
@@ -568,6 +665,7 @@
   <div class="stat"><div class="stat-value" id="total-count">0</div><div class="stat-label">Articles</div></div>
   <div class="stat"><div class="stat-value" id="category-count">0</div><div class="stat-label">Categories</div></div>
   <div class="stat"><div class="stat-value" id="source-count">0</div><div class="stat-label">Sources</div></div>
+  <div class="stat"><div class="stat-value" id="sites-count">0</div><div class="stat-label">Sites</div></div>
 </div>
 
 <!-- Controls -->
@@ -589,26 +687,73 @@
   <div class="no-results" id="no-results">No articles match your filter.</div>
 </div>
 
+<!-- Sites Section (hidden by default) -->
+<div id="sites-section" style="display:none">
+  <div class="controls-bar">
+    <div class="filters" id="site-filters"></div>
+  </div>
+  <div class="content">
+    <div class="sites-grid" id="sites-container"></div>
+    <div class="no-results" id="no-sites">No sites match your filter.</div>
+  </div>
+</div>
+
 <div class="footer">Brain Vault — articles saved with Claude AI</div>
 
 <script>
 (async function() {
+  // ---- Load data ----
   let articles = [];
+  let bookmarks = [];
+
   try {
     const resp = await fetch('data.json');
     const data = await resp.json();
     articles = data.articles || [];
-  } catch {
-    document.getElementById('articles-container').innerHTML =
-      '<div class="empty-state"><div class="empty-state-icon">📭</div><p>No articles yet.</p></div>';
-    return;
-  }
+  } catch {}
+
+  try {
+    const resp = await fetch('bookmarks.json');
+    const data = await resp.json();
+    bookmarks = data.bookmarks || [];
+  } catch {}
 
   if (!articles.length) {
     document.getElementById('articles-container').innerHTML =
       '<div class="empty-state"><div class="empty-state-icon">📭</div><p>No articles yet.</p></div>';
-    return;
   }
+
+  // ---- View switching ----
+  const articlesSection = document.querySelector('.content');
+  const controlsBar = document.querySelector('.controls-bar');
+  const sitesSection = document.getElementById('sites-section');
+  const heroEl = document.querySelector('.hero');
+  const heroSub = document.querySelector('.hero-sub');
+  const navLinks = document.querySelectorAll('.nav-link[data-view]');
+
+  function switchView(view) {
+    navLinks.forEach(l => l.classList.toggle('active', l.dataset.view === view));
+    const isArticles = view === 'articles';
+    articlesSection.style.display = isArticles ? '' : 'none';
+    controlsBar.style.display = isArticles ? '' : 'none';
+    sitesSection.style.display = isArticles ? 'none' : '';
+    heroSub.textContent = isArticles
+      ? 'A curated collection of interesting reads, saved & organized with AI.'
+      : 'Useful sites, repos & tools — saved for quick access.';
+    if (!isArticles) renderSites();
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      switchView(link.dataset.view);
+    });
+  });
+
+  // Sites count in stats
+  document.getElementById('sites-count').textContent = bookmarks.length;
+
+  if (!articles.length && !bookmarks.length) return;
 
   // Stats
   const categories = [...new Set(articles.map(a => a.category))];
@@ -737,17 +882,97 @@
 
   function renderSearchResults(q) {
     if (!q) { searchResults.innerHTML = '<div class="search-empty">Start typing to search…</div>'; return; }
-    const matched = articles.filter(a =>
-      [a.title, a.description, a.category, a.source, a.note, a.url].join(' ').toLowerCase().includes(q)
-    ).slice(0, 8);
 
-    if (!matched.length) { searchResults.innerHTML = '<div class="search-empty">No results found</div>'; return; }
-    searchResults.innerHTML = matched.map(a => `
-      <a class="search-result-item" href="${esc(a.url)}" target="_blank">
+    // Search both articles and bookmarks
+    const matchedArticles = articles.filter(a =>
+      [a.title, a.description, a.category, a.source, a.note, a.url].join(' ').toLowerCase().includes(q)
+    ).slice(0, 6);
+
+    const matchedSites = bookmarks.filter(b =>
+      [b.name, b.url, b.source, ...(b.tags || [])].join(' ').toLowerCase().includes(q)
+    ).slice(0, 4);
+
+    if (!matchedArticles.length && !matchedSites.length) {
+      searchResults.innerHTML = '<div class="search-empty">No results found</div>';
+      return;
+    }
+
+    let html = '';
+    matchedArticles.forEach(a => {
+      html += `<a class="search-result-item" href="${esc(a.url)}" target="_blank">
         <div class="search-result-title">${esc(a.title)}</div>
         <div class="search-result-meta">${esc(a.category)} · ${esc(a.source)} · ${fmtDate(a.date)}</div>
-      </a>
-    `).join('');
+      </a>`;
+    });
+    matchedSites.forEach(b => {
+      html += `<a class="search-result-item" href="${esc(b.url)}" target="_blank">
+        <div class="search-result-title">🔗 ${esc(b.name)}</div>
+        <div class="search-result-meta">${(b.tags||[]).join(', ')} · ${esc(b.source)}</div>
+      </a>`;
+    });
+    searchResults.innerHTML = html;
+  }
+
+  // ---- Sites rendering ----
+  let activeSiteTag = null;
+
+  function renderSites() {
+    const container = document.getElementById('sites-container');
+    const noRes = document.getElementById('no-sites');
+    const filtersEl = document.getElementById('site-filters');
+
+    // Build tag filters
+    const tagCounts = {};
+    bookmarks.forEach(b => (b.tags || []).forEach(t => tagCounts[t] = (tagCounts[t] || 0) + 1));
+    const sortedTags = Object.entries(tagCounts).sort((a, b) => b[1] - a[1]);
+
+    filtersEl.innerHTML = '';
+    const allBtn = document.createElement('button');
+    allBtn.className = 'filter-pill' + (!activeSiteTag ? ' active' : '');
+    allBtn.innerHTML = `All<span class="pill-count">${bookmarks.length}</span>`;
+    allBtn.addEventListener('click', () => { activeSiteTag = null; renderSites(); });
+    filtersEl.appendChild(allBtn);
+
+    sortedTags.forEach(([tag, count]) => {
+      const btn = document.createElement('button');
+      btn.className = 'filter-pill' + (activeSiteTag === tag ? ' active' : '');
+      btn.innerHTML = `${esc(tag)}<span class="pill-count">${count}</span>`;
+      btn.addEventListener('click', () => { activeSiteTag = activeSiteTag === tag ? null : tag; renderSites(); });
+      filtersEl.appendChild(btn);
+    });
+
+    // Filter
+    let list = activeSiteTag
+      ? bookmarks.filter(b => (b.tags || []).includes(activeSiteTag))
+      : [...bookmarks];
+
+    if (!list.length) {
+      container.innerHTML = '';
+      noRes.style.display = bookmarks.length ? 'block' : 'none';
+      if (!bookmarks.length) {
+        container.innerHTML = '<div class="empty-state"><div class="empty-state-icon">🔗</div><p>No saved sites yet.</p></div>';
+      }
+      return;
+    }
+    noRes.style.display = 'none';
+
+    container.innerHTML = list.map((b, i) => {
+      const delay = Math.min(i * 0.04, 0.4);
+      const favicon = `https://www.google.com/s2/favicons?sz=64&domain=${encodeURIComponent(new URL(b.url).hostname)}`;
+      const tagsHtml = (b.tags || []).map(t => `<span class="site-tag">${esc(t)}</span>`).join('');
+      return `
+        <a class="site-card" href="${esc(b.url)}" target="_blank" rel="noopener" style="animation-delay:${delay}s">
+          <img class="site-favicon" src="${favicon}" alt="" width="28" height="28">
+          <div class="site-info">
+            <div class="site-name">${esc(b.name)}</div>
+            <div class="site-url">${esc(truncUrl(b.url))}</div>
+            <div class="site-tags">
+              ${tagsHtml}
+              <span class="site-source">${esc(b.source)}</span>
+            </div>
+          </div>
+        </a>`;
+    }).join('');
   }
 })();
 </script>
