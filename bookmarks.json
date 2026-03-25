@@ -1,6 +1,16 @@
 {
   "bookmarks": [
     {
+      "id": "1774416355743",
+      "url": "https://lottiefiles.com/featured-free-animations",
+      "name": "App design Animations",
+      "tags": [
+        "lottiefiles"
+      ],
+      "source": "lottiefiles.com",
+      "date": "2026-03-25"
+    },
+    {
       "id": "1774188096067",
       "url": "https://www.typeui.sh/",
       "name": "typeui.sh - Design Layer for Agentic Tooling",
@@ -29,17 +39,7 @@
       ],
       "source": "svgrepo.com",
       "date": "2026-03-22"
-    },
-    {
-      "id": "1774179343416",
-      "url": "https://docs.python.org/3/library/asyncio.html",
-      "name": "asyncio docs",
-      "tags": [
-        "python"
-      ],
-      "source": "docs.python.org",
-      "date": "2026-03-22"
     }
   ],
-  "lastUpdated": "2026-03-22T19:31:36.068441"
+  "lastUpdated": "2026-03-25T10:55:55.744570"
 }
