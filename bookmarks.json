@@ -1,6 +1,16 @@
 {
   "bookmarks": [
     {
+      "id": "1774418055139",
+      "url": "https://refero.design/apps",
+      "name": "Refero — UI/UX Design Inspiration for Your Next Project",
+      "tags": [
+        "refero"
+      ],
+      "source": "refero.design",
+      "date": "2026-03-25"
+    },
+    {
       "id": "1774417847959",
       "url": "https://iconscout.com/",
       "name": "https://iconscout.com/",
@@ -81,5 +91,5 @@
       "date": "2026-03-22"
     }
   ],
-  "lastUpdated": "2026-03-25T11:20:47.961344"
+  "lastUpdated": "2026-03-25T11:24:15.140991"
 }
