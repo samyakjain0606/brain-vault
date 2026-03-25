@@ -1,6 +1,16 @@
 {
   "bookmarks": [
     {
+      "id": "1774416960246",
+      "url": "https://rive.app/",
+      "name": "https://rive.app/",
+      "tags": [
+        "rive"
+      ],
+      "source": "rive.app",
+      "date": "2026-03-25"
+    },
+    {
       "id": "1774416355743",
       "url": "https://lottiefiles.com/featured-free-animations",
       "name": "App design Animations",
@@ -41,5 +51,5 @@
       "date": "2026-03-22"
     }
   ],
-  "lastUpdated": "2026-03-25T10:55:55.744570"
+  "lastUpdated": "2026-03-25T11:06:00.246636"
 }
