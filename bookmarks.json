@@ -1,6 +1,16 @@
 {
   "bookmarks": [
     {
+      "id": "1774418068532",
+      "url": "https://mobbin.com/",
+      "name": "Mobbin — UI & UX design inspiration for mobile & web appsMobbin",
+      "tags": [
+        "mobbin"
+      ],
+      "source": "mobbin.com",
+      "date": "2026-03-25"
+    },
+    {
       "id": "1774418055139",
       "url": "https://refero.design/apps",
       "name": "Refero — UI/UX Design Inspiration for Your Next Project",
@@ -91,5 +101,5 @@
       "date": "2026-03-22"
     }
   ],
-  "lastUpdated": "2026-03-25T11:24:15.140991"
+  "lastUpdated": "2026-03-25T11:24:28.532688"
 }
