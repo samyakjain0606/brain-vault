@@ -1,6 +1,16 @@
 {
   "bookmarks": [
     {
+      "id": "1774953654333",
+      "url": "https://interface-design.dev/index.html",
+      "name": "interface-design · Claude Code Plugin",
+      "tags": [
+        "interface-design"
+      ],
+      "source": "interface-design.dev",
+      "date": "2026-03-31"
+    },
+    {
       "id": "1774418068532",
       "url": "https://mobbin.com/",
       "name": "Mobbin — UI & UX design inspiration for mobile & web appsMobbin",
@@ -101,5 +111,5 @@
       "date": "2026-03-22"
     }
   ],
-  "lastUpdated": "2026-03-25T11:24:28.532688"
+  "lastUpdated": "2026-03-31T16:10:54.334167"
 }
