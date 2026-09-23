@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24T00:21:52",
+  "updatedAt": "2026-09-24T00:58:39",
   "items": [
     {
       "id": "775886a769",
@@ -15,11 +15,60 @@
       "screenshot": "",
       "savedAt": "2026-03-31",
       "shelf": "tool",
-      "topic": "ai",
-      "tags": [],
-      "classifiedBy": "rules",
+      "topic": "design",
+      "tags": [
+        "claude",
+        "coding tools",
+        "design system",
+        "ai agents"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "legacy"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "post": 0.0,
+          "tool": 1.0,
+          "inspiration": 0.0,
+          "reading": 0.0
+        },
+        "topic": {
+          "startups": 0.0,
+          "money": 0.0,
+          "engineering": 0.0,
+          "ai": 0.15,
+          "writing": 0.0,
+          "design": 0.85,
+          "other": 0.0,
+          "craft": 0.0
+        },
+        "tags": {
+          "onboarding": 0.03,
+          "empty states": 0.02,
+          "landing page": 0.03,
+          "mobile app": 0.03,
+          "typography": 0.1,
+          "icons": 0.04,
+          "illustration": 0.06,
+          "animation": 0.03,
+          "design system": 0.68,
+          "ui patterns": 0.03,
+          "prompting": 0.33,
+          "ai agents": 0.61,
+          "coding tools": 0.87,
+          "claude": 0.95,
+          "open source": 0.46,
+          "essay": 0.01,
+          "productivity": 0.6,
+          "learning": 0.22,
+          "founders": 0.01,
+          "ideas": 0.08,
+          "branding": 0.06,
+          "writing style": 0.02,
+          "careers": 0.01
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "8347b01dee",
@@ -33,12 +82,59 @@
       "image": "https://framerusercontent.com/assets/FE3uqmxi41SxsiiVq9JNJC1Pwc.png",
       "screenshot": "",
       "savedAt": "2026-03-25",
-      "shelf": "tool",
+      "shelf": "inspiration",
       "topic": "design",
-      "tags": [],
-      "classifiedBy": "rules",
+      "tags": [
+        "ui patterns",
+        "mobile app"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "legacy"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "post": 0.0,
+          "reading": 0.0,
+          "inspiration": 0.97,
+          "tool": 0.03
+        },
+        "topic": {
+          "other": 0.0,
+          "money": 0.0,
+          "design": 1.0,
+          "engineering": 0.0,
+          "startups": 0.0,
+          "craft": 0.0,
+          "ai": 0.0,
+          "writing": 0.0
+        },
+        "tags": {
+          "onboarding": 0.15,
+          "empty states": 0.06,
+          "landing page": 0.14,
+          "mobile app": 0.96,
+          "typography": 0.09,
+          "icons": 0.06,
+          "illustration": 0.22,
+          "animation": 0.06,
+          "design system": 0.15,
+          "ui patterns": 0.98,
+          "prompting": 0.01,
+          "ai agents": 0.01,
+          "coding tools": 0.01,
+          "claude": 0.01,
+          "open source": 0.02,
+          "essay": 0.01,
+          "productivity": 0.19,
+          "learning": 0.36,
+          "founders": 0.01,
+          "ideas": 0.02,
+          "branding": 0.14,
+          "writing style": 0.01,
+          "careers": 0.03
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "33868c0ef8",
@@ -52,12 +148,58 @@
       "image": "https://refero.design/open-graph-5-1200x630.png",
       "screenshot": "",
       "savedAt": "2026-03-25",
-      "shelf": "tool",
+      "shelf": "inspiration",
       "topic": "design",
-      "tags": [],
-      "classifiedBy": "rules",
+      "tags": [
+        "ui patterns"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "legacy"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "inspiration": 0.99,
+          "reading": 0.0,
+          "post": 0.0,
+          "tool": 0.01
+        },
+        "topic": {
+          "engineering": 0.0,
+          "other": 0.0,
+          "ai": 0.0,
+          "money": 0.0,
+          "startups": 0.0,
+          "craft": 0.0,
+          "writing": 0.0,
+          "design": 1.0
+        },
+        "tags": {
+          "onboarding": 0.1,
+          "empty states": 0.06,
+          "landing page": 0.3,
+          "mobile app": 0.45,
+          "typography": 0.1,
+          "icons": 0.07,
+          "illustration": 0.16,
+          "animation": 0.06,
+          "design system": 0.16,
+          "ui patterns": 0.97,
+          "prompting": 0.01,
+          "ai agents": 0.01,
+          "coding tools": 0.01,
+          "claude": 0.01,
+          "open source": 0.02,
+          "essay": 0.01,
+          "productivity": 0.03,
+          "learning": 0.22,
+          "founders": 0.01,
+          "ideas": 0.02,
+          "branding": 0.06,
+          "writing style": 0.01,
+          "careers": 0.02
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "a081f2e492",
@@ -72,11 +214,58 @@
       "screenshot": "",
       "savedAt": "2026-03-25",
       "shelf": "tool",
-      "topic": "other",
-      "tags": [],
-      "classifiedBy": "rules",
+      "topic": "design",
+      "tags": [
+        "icons",
+        "illustration"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "legacy"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "inspiration": 0.01,
+          "tool": 0.99,
+          "post": 0.0,
+          "reading": 0.0
+        },
+        "topic": {
+          "startups": 0.0,
+          "other": 0.0,
+          "ai": 0.0,
+          "craft": 0.0,
+          "design": 1.0,
+          "money": 0.0,
+          "writing": 0.0,
+          "engineering": 0.0
+        },
+        "tags": {
+          "onboarding": 0.03,
+          "empty states": 0.03,
+          "landing page": 0.02,
+          "mobile app": 0.04,
+          "typography": 0.03,
+          "icons": 0.87,
+          "illustration": 0.74,
+          "animation": 0.15,
+          "design system": 0.16,
+          "ui patterns": 0.06,
+          "prompting": 0.02,
+          "ai agents": 0.02,
+          "coding tools": 0.02,
+          "claude": 0.01,
+          "open source": 0.03,
+          "essay": 0.01,
+          "productivity": 0.03,
+          "learning": 0.04,
+          "founders": 0.02,
+          "ideas": 0.02,
+          "branding": 0.04,
+          "writing style": 0.01,
+          "careers": 0.03
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "67b0942ce4",
@@ -92,10 +281,57 @@
       "savedAt": "2026-03-25",
       "shelf": "tool",
       "topic": "design",
-      "tags": [],
-      "classifiedBy": "rules",
+      "tags": [
+        "illustration",
+        "animation"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "legacy"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "inspiration": 0.0,
+          "post": 0.0,
+          "tool": 1.0,
+          "reading": 0.0
+        },
+        "topic": {
+          "ai": 0.0,
+          "craft": 0.0,
+          "design": 1.0,
+          "money": 0.0,
+          "engineering": 0.0,
+          "startups": 0.0,
+          "writing": 0.0,
+          "other": 0.0
+        },
+        "tags": {
+          "onboarding": 0.03,
+          "empty states": 0.02,
+          "landing page": 0.02,
+          "mobile app": 0.02,
+          "typography": 0.02,
+          "icons": 0.07,
+          "illustration": 0.96,
+          "animation": 0.93,
+          "design system": 0.03,
+          "ui patterns": 0.02,
+          "prompting": 0.01,
+          "ai agents": 0.01,
+          "coding tools": 0.06,
+          "claude": 0.01,
+          "open source": 0.02,
+          "essay": 0.01,
+          "productivity": 0.04,
+          "learning": 0.16,
+          "founders": 0.02,
+          "ideas": 0.02,
+          "branding": 0.08,
+          "writing style": 0.01,
+          "careers": 0.02
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "fe7ed6d20c",
@@ -111,10 +347,58 @@
       "savedAt": "2026-03-25",
       "shelf": "tool",
       "topic": "design",
-      "tags": [],
-      "classifiedBy": "rules",
+      "tags": [
+        "icons",
+        "illustration",
+        "animation"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "legacy"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "inspiration": 0.0,
+          "post": 0.0,
+          "reading": 0.0,
+          "tool": 1.0
+        },
+        "topic": {
+          "design": 1.0,
+          "ai": 0.0,
+          "startups": 0.0,
+          "other": 0.0,
+          "writing": 0.0,
+          "money": 0.0,
+          "engineering": 0.0,
+          "craft": 0.0
+        },
+        "tags": {
+          "onboarding": 0.02,
+          "empty states": 0.02,
+          "landing page": 0.01,
+          "mobile app": 0.03,
+          "typography": 0.01,
+          "icons": 0.99,
+          "illustration": 0.95,
+          "animation": 0.94,
+          "design system": 0.13,
+          "ui patterns": 0.03,
+          "prompting": 0.01,
+          "ai agents": 0.01,
+          "coding tools": 0.01,
+          "claude": 0.01,
+          "open source": 0.02,
+          "essay": 0.01,
+          "productivity": 0.03,
+          "learning": 0.03,
+          "founders": 0.01,
+          "ideas": 0.06,
+          "branding": 0.15,
+          "writing style": 0.01,
+          "careers": 0.01
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "f0039afff4",
@@ -130,10 +414,57 @@
       "savedAt": "2026-03-25",
       "shelf": "tool",
       "topic": "design",
-      "tags": [],
-      "classifiedBy": "rules",
+      "tags": [
+        "animation",
+        "illustration"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "legacy"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "inspiration": 0.11,
+          "post": 0.0,
+          "tool": 0.89,
+          "reading": 0.0
+        },
+        "topic": {
+          "writing": 0.0,
+          "engineering": 0.0,
+          "design": 1.0,
+          "other": 0.0,
+          "craft": 0.0,
+          "startups": 0.0,
+          "money": 0.0,
+          "ai": 0.0
+        },
+        "tags": {
+          "onboarding": 0.05,
+          "empty states": 0.02,
+          "landing page": 0.03,
+          "mobile app": 0.12,
+          "typography": 0.03,
+          "icons": 0.05,
+          "illustration": 0.63,
+          "animation": 0.94,
+          "design system": 0.12,
+          "ui patterns": 0.07,
+          "prompting": 0.01,
+          "ai agents": 0.02,
+          "coding tools": 0.14,
+          "claude": 0.01,
+          "open source": 0.03,
+          "essay": 0.01,
+          "productivity": 0.05,
+          "learning": 0.13,
+          "founders": 0.02,
+          "ideas": 0.04,
+          "branding": 0.4,
+          "writing style": 0.01,
+          "careers": 0.03
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "f1581cebe2",
@@ -149,10 +480,56 @@
       "savedAt": "2026-03-25",
       "shelf": "tool",
       "topic": "design",
-      "tags": [],
-      "classifiedBy": "rules",
-      "needsReview": false,
-      "shelfSource": "legacy"
+      "tags": [
+        "animation"
+      ],
+      "classifiedBy": "jev",
+      "needsReview": true,
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "inspiration": 0.48,
+          "post": 0.0,
+          "reading": 0.0,
+          "tool": 0.52
+        },
+        "topic": {
+          "design": 1.0,
+          "ai": 0.0,
+          "startups": 0.0,
+          "other": 0.0,
+          "writing": 0.0,
+          "money": 0.0,
+          "engineering": 0.0,
+          "craft": 0.0
+        },
+        "tags": {
+          "onboarding": 0.11,
+          "empty states": 0.05,
+          "landing page": 0.03,
+          "mobile app": 0.21,
+          "typography": 0.02,
+          "icons": 0.08,
+          "illustration": 0.41,
+          "animation": 0.92,
+          "design system": 0.12,
+          "ui patterns": 0.14,
+          "prompting": 0.01,
+          "ai agents": 0.01,
+          "coding tools": 0.02,
+          "claude": 0.01,
+          "open source": 0.04,
+          "essay": 0.01,
+          "productivity": 0.02,
+          "learning": 0.08,
+          "founders": 0.01,
+          "ideas": 0.03,
+          "branding": 0.04,
+          "writing style": 0.01,
+          "careers": 0.02
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "c58fe2ea4b",
@@ -168,10 +545,57 @@
       "savedAt": "2026-03-22",
       "shelf": "tool",
       "topic": "design",
-      "tags": [],
-      "classifiedBy": "rules",
+      "tags": [
+        "ai agents",
+        "design system"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "legacy"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "post": 0.0,
+          "tool": 0.94,
+          "inspiration": 0.06,
+          "reading": 0.0
+        },
+        "topic": {
+          "engineering": 0.04,
+          "design": 0.49,
+          "money": 0.0,
+          "other": 0.0,
+          "ai": 0.47,
+          "writing": 0.0,
+          "craft": 0.0,
+          "startups": 0.0
+        },
+        "tags": {
+          "onboarding": 0.04,
+          "empty states": 0.03,
+          "landing page": 0.06,
+          "mobile app": 0.05,
+          "typography": 0.19,
+          "icons": 0.12,
+          "illustration": 0.14,
+          "animation": 0.07,
+          "design system": 0.63,
+          "ui patterns": 0.22,
+          "prompting": 0.07,
+          "ai agents": 0.83,
+          "coding tools": 0.21,
+          "claude": 0.05,
+          "open source": 0.31,
+          "essay": 0.02,
+          "productivity": 0.06,
+          "learning": 0.07,
+          "founders": 0.03,
+          "ideas": 0.03,
+          "branding": 0.18,
+          "writing style": 0.02,
+          "careers": 0.02
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "88b1beda60",
@@ -186,11 +610,59 @@
       "screenshot": "",
       "savedAt": "2026-03-22",
       "shelf": "tool",
-      "topic": "engineering",
-      "tags": [],
-      "classifiedBy": "rules",
+      "topic": "ai",
+      "tags": [
+        "open source",
+        "ai agents",
+        "prompting"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "legacy"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "inspiration": 0.0,
+          "tool": 1.0,
+          "reading": 0.0,
+          "post": 0.0
+        },
+        "topic": {
+          "ai": 1.0,
+          "startups": 0.0,
+          "design": 0.0,
+          "engineering": 0.0,
+          "other": 0.0,
+          "writing": 0.0,
+          "craft": 0.0,
+          "money": 0.0
+        },
+        "tags": {
+          "onboarding": 0.01,
+          "empty states": 0.02,
+          "landing page": 0.02,
+          "mobile app": 0.02,
+          "typography": 0.02,
+          "icons": 0.06,
+          "illustration": 0.34,
+          "animation": 0.03,
+          "design system": 0.03,
+          "ui patterns": 0.02,
+          "prompting": 0.8,
+          "ai agents": 0.82,
+          "coding tools": 0.15,
+          "claude": 0.04,
+          "open source": 0.98,
+          "essay": 0.01,
+          "productivity": 0.2,
+          "learning": 0.5,
+          "founders": 0.02,
+          "ideas": 0.07,
+          "branding": 0.03,
+          "writing style": 0.06,
+          "careers": 0.04
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "cdce3f1786",
@@ -205,11 +677,58 @@
       "screenshot": "",
       "savedAt": "2026-03-22",
       "shelf": "tool",
-      "topic": "other",
-      "tags": [],
-      "classifiedBy": "rules",
+      "topic": "design",
+      "tags": [
+        "illustration",
+        "icons"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "legacy"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "tool": 0.99,
+          "inspiration": 0.01,
+          "post": 0.0,
+          "reading": 0.0
+        },
+        "topic": {
+          "startups": 0.0,
+          "other": 0.0,
+          "ai": 0.0,
+          "writing": 0.0,
+          "craft": 0.0,
+          "engineering": 0.0,
+          "design": 1.0,
+          "money": 0.0
+        },
+        "tags": {
+          "onboarding": 0.02,
+          "empty states": 0.03,
+          "landing page": 0.02,
+          "mobile app": 0.02,
+          "typography": 0.02,
+          "icons": 0.85,
+          "illustration": 0.97,
+          "animation": 0.1,
+          "design system": 0.1,
+          "ui patterns": 0.03,
+          "prompting": 0.01,
+          "ai agents": 0.01,
+          "coding tools": 0.02,
+          "claude": 0.01,
+          "open source": 0.21,
+          "essay": 0.01,
+          "productivity": 0.02,
+          "learning": 0.03,
+          "founders": 0.01,
+          "ideas": 0.02,
+          "branding": 0.03,
+          "writing style": 0.01,
+          "careers": 0.01
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "8b03e7fd70",
@@ -224,11 +743,55 @@
       "screenshot": "",
       "savedAt": "2026-03-13",
       "shelf": "reading",
-      "topic": "other",
+      "topic": "ai",
       "tags": [],
-      "classifiedBy": "rules",
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "default"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "reading": 0.75,
+          "tool": 0.05,
+          "post": 0.0,
+          "inspiration": 0.2
+        },
+        "topic": {
+          "craft": 0.01,
+          "other": 0.05,
+          "writing": 0.01,
+          "design": 0.04,
+          "money": 0.0,
+          "ai": 0.88,
+          "startups": 0.0,
+          "engineering": 0.01
+        },
+        "tags": {
+          "onboarding": 0.06,
+          "empty states": 0.07,
+          "landing page": 0.09,
+          "mobile app": 0.06,
+          "typography": 0.08,
+          "icons": 0.08,
+          "illustration": 0.08,
+          "animation": 0.11,
+          "design system": 0.11,
+          "ui patterns": 0.14,
+          "prompting": 0.15,
+          "ai agents": 0.21,
+          "coding tools": 0.17,
+          "claude": 0.04,
+          "open source": 0.09,
+          "essay": 0.07,
+          "productivity": 0.11,
+          "learning": 0.11,
+          "founders": 0.12,
+          "ideas": 0.08,
+          "branding": 0.08,
+          "writing style": 0.06,
+          "careers": 0.05
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "7151d0512a",
@@ -246,9 +809,57 @@
       "handle": "heyrobinai",
       "shelf": "reading",
       "topic": "ai",
-      "tags": [],
-      "classifiedBy": "rules",
+      "tags": [
+        "writing style",
+        "learning",
+        "prompting"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "post": 0.69,
+          "tool": 0.18,
+          "inspiration": 0.01,
+          "reading": 0.12
+        },
+        "topic": {
+          "design": 0.0,
+          "other": 0.0,
+          "engineering": 0.0,
+          "ai": 0.61,
+          "writing": 0.39,
+          "craft": 0.0,
+          "money": 0.0,
+          "startups": 0.0
+        },
+        "tags": {
+          "onboarding": 0.02,
+          "empty states": 0.01,
+          "landing page": 0.02,
+          "mobile app": 0.01,
+          "typography": 0.03,
+          "icons": 0.01,
+          "illustration": 0.02,
+          "animation": 0.02,
+          "design system": 0.01,
+          "ui patterns": 0.01,
+          "prompting": 0.73,
+          "ai agents": 0.1,
+          "coding tools": 0.03,
+          "claude": 0.04,
+          "open source": 0.03,
+          "essay": 0.05,
+          "productivity": 0.2,
+          "learning": 0.81,
+          "founders": 0.02,
+          "ideas": 0.18,
+          "branding": 0.05,
+          "writing style": 0.96,
+          "careers": 0.08
+        }
+      },
       "shelfSource": "url"
     },
     {
@@ -265,10 +876,59 @@
       "savedAt": "2026-03-06",
       "shelf": "reading",
       "topic": "craft",
-      "tags": [],
-      "classifiedBy": "rules",
+      "tags": [
+        "essay",
+        "productivity",
+        "learning",
+        "careers"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "default"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "reading": 1.0,
+          "tool": 0.0,
+          "inspiration": 0.0,
+          "post": 0.0
+        },
+        "topic": {
+          "writing": 0.0,
+          "ai": 0.0,
+          "startups": 0.0,
+          "design": 0.0,
+          "other": 0.0,
+          "engineering": 0.0,
+          "money": 0.0,
+          "craft": 1.0
+        },
+        "tags": {
+          "onboarding": 0.01,
+          "empty states": 0.01,
+          "landing page": 0.01,
+          "mobile app": 0.01,
+          "typography": 0.01,
+          "icons": 0.01,
+          "illustration": 0.02,
+          "animation": 0.01,
+          "design system": 0.01,
+          "ui patterns": 0.01,
+          "prompting": 0.01,
+          "ai agents": 0.01,
+          "coding tools": 0.01,
+          "claude": 0.01,
+          "open source": 0.01,
+          "essay": 0.96,
+          "productivity": 0.86,
+          "learning": 0.85,
+          "founders": 0.13,
+          "ideas": 0.03,
+          "branding": 0.02,
+          "writing style": 0.03,
+          "careers": 0.79
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "35ed22df62",
@@ -284,10 +944,57 @@
       "savedAt": "2026-03-06",
       "shelf": "reading",
       "topic": "startups",
-      "tags": [],
-      "classifiedBy": "rules",
+      "tags": [
+        "essay",
+        "branding"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "default"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "post": 0.0,
+          "reading": 1.0,
+          "inspiration": 0.0,
+          "tool": 0.0
+        },
+        "topic": {
+          "startups": 0.74,
+          "ai": 0.0,
+          "writing": 0.0,
+          "other": 0.03,
+          "design": 0.0,
+          "money": 0.23,
+          "craft": 0.0,
+          "engineering": 0.0
+        },
+        "tags": {
+          "onboarding": 0.01,
+          "empty states": 0.01,
+          "landing page": 0.02,
+          "mobile app": 0.01,
+          "typography": 0.01,
+          "icons": 0.01,
+          "illustration": 0.03,
+          "animation": 0.01,
+          "design system": 0.01,
+          "ui patterns": 0.01,
+          "prompting": 0.01,
+          "ai agents": 0.01,
+          "coding tools": 0.01,
+          "claude": 0.01,
+          "open source": 0.01,
+          "essay": 0.92,
+          "productivity": 0.05,
+          "learning": 0.1,
+          "founders": 0.09,
+          "ideas": 0.04,
+          "branding": 0.64,
+          "writing style": 0.04,
+          "careers": 0.07
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "3545faf54e",
@@ -303,10 +1010,57 @@
       "savedAt": "2026-03-01",
       "shelf": "reading",
       "topic": "ai",
-      "tags": [],
-      "classifiedBy": "rules",
+      "tags": [
+        "learning",
+        "essay"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "default"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "post": 0.0,
+          "inspiration": 0.0,
+          "reading": 1.0,
+          "tool": 0.0
+        },
+        "topic": {
+          "writing": 0.0,
+          "money": 0.0,
+          "ai": 1.0,
+          "design": 0.0,
+          "engineering": 0.0,
+          "startups": 0.0,
+          "other": 0.0,
+          "craft": 0.0
+        },
+        "tags": {
+          "onboarding": 0.01,
+          "empty states": 0.01,
+          "landing page": 0.01,
+          "mobile app": 0.01,
+          "typography": 0.01,
+          "icons": 0.01,
+          "illustration": 0.02,
+          "animation": 0.01,
+          "design system": 0.01,
+          "ui patterns": 0.01,
+          "prompting": 0.07,
+          "ai agents": 0.07,
+          "coding tools": 0.04,
+          "claude": 0.02,
+          "open source": 0.02,
+          "essay": 0.66,
+          "productivity": 0.04,
+          "learning": 0.83,
+          "founders": 0.02,
+          "ideas": 0.02,
+          "branding": 0.02,
+          "writing style": 0.02,
+          "careers": 0.07
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "7c42241ab4",
@@ -321,11 +1075,58 @@
       "screenshot": "",
       "savedAt": "2026-03-01",
       "shelf": "tool",
-      "topic": "engineering",
-      "tags": [],
-      "classifiedBy": "rules",
+      "topic": "ai",
+      "tags": [
+        "open source",
+        "ai agents"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "url"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "post": 0.0,
+          "tool": 1.0,
+          "inspiration": 0.0,
+          "reading": 0.0
+        },
+        "topic": {
+          "startups": 0.0,
+          "money": 0.0,
+          "writing": 0.0,
+          "other": 0.0,
+          "engineering": 0.46,
+          "craft": 0.0,
+          "ai": 0.54,
+          "design": 0.0
+        },
+        "tags": {
+          "onboarding": 0.02,
+          "empty states": 0.02,
+          "landing page": 0.01,
+          "mobile app": 0.02,
+          "typography": 0.01,
+          "icons": 0.03,
+          "illustration": 0.02,
+          "animation": 0.01,
+          "design system": 0.02,
+          "ui patterns": 0.02,
+          "prompting": 0.05,
+          "ai agents": 0.69,
+          "coding tools": 0.15,
+          "claude": 0.03,
+          "open source": 0.96,
+          "essay": 0.01,
+          "productivity": 0.2,
+          "learning": 0.18,
+          "founders": 0.01,
+          "ideas": 0.01,
+          "branding": 0.02,
+          "writing style": 0.01,
+          "careers": 0.03
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "07f322dd73",
@@ -340,11 +1141,58 @@
       "screenshot": "",
       "savedAt": "2026-02-28",
       "shelf": "reading",
-      "topic": "ai",
-      "tags": [],
-      "classifiedBy": "rules",
+      "topic": "craft",
+      "tags": [
+        "ideas",
+        "essay"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "default"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "post": 0.0,
+          "tool": 0.0,
+          "reading": 1.0,
+          "inspiration": 0.0
+        },
+        "topic": {
+          "other": 0.02,
+          "design": 0.0,
+          "engineering": 0.0,
+          "ai": 0.0,
+          "startups": 0.32,
+          "writing": 0.0,
+          "money": 0.0,
+          "craft": 0.66
+        },
+        "tags": {
+          "onboarding": 0.01,
+          "empty states": 0.01,
+          "landing page": 0.01,
+          "mobile app": 0.01,
+          "typography": 0.01,
+          "icons": 0.01,
+          "illustration": 0.02,
+          "animation": 0.01,
+          "design system": 0.01,
+          "ui patterns": 0.01,
+          "prompting": 0.1,
+          "ai agents": 0.05,
+          "coding tools": 0.01,
+          "claude": 0.01,
+          "open source": 0.01,
+          "essay": 0.95,
+          "productivity": 0.18,
+          "learning": 0.38,
+          "founders": 0.21,
+          "ideas": 0.97,
+          "branding": 0.03,
+          "writing style": 0.04,
+          "careers": 0.14
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "c781a8764a",
@@ -360,10 +1208,59 @@
       "savedAt": "2026-02-28",
       "shelf": "reading",
       "topic": "craft",
-      "tags": [],
-      "classifiedBy": "rules",
+      "tags": [
+        "essay",
+        "careers",
+        "productivity",
+        "learning"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "default"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "post": 0.0,
+          "tool": 0.0,
+          "reading": 1.0,
+          "inspiration": 0.0
+        },
+        "topic": {
+          "craft": 1.0,
+          "ai": 0.0,
+          "money": 0.0,
+          "design": 0.0,
+          "other": 0.0,
+          "writing": 0.0,
+          "startups": 0.0,
+          "engineering": 0.0
+        },
+        "tags": {
+          "onboarding": 0.01,
+          "empty states": 0.01,
+          "landing page": 0.01,
+          "mobile app": 0.01,
+          "typography": 0.01,
+          "icons": 0.01,
+          "illustration": 0.02,
+          "animation": 0.01,
+          "design system": 0.01,
+          "ui patterns": 0.01,
+          "prompting": 0.02,
+          "ai agents": 0.02,
+          "coding tools": 0.01,
+          "claude": 0.01,
+          "open source": 0.01,
+          "essay": 0.94,
+          "productivity": 0.9,
+          "learning": 0.74,
+          "founders": 0.16,
+          "ideas": 0.28,
+          "branding": 0.03,
+          "writing style": 0.05,
+          "careers": 0.94
+        }
+      },
+      "shelfSource": "jev"
     },
     {
       "id": "7254f25967",
@@ -379,10 +1276,57 @@
       "savedAt": "2026-02-28",
       "shelf": "reading",
       "topic": "craft",
-      "tags": [],
-      "classifiedBy": "rules",
+      "tags": [
+        "careers",
+        "essay"
+      ],
+      "classifiedBy": "jev",
       "needsReview": false,
-      "shelfSource": "default"
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "post": 0.0,
+          "tool": 0.0,
+          "reading": 1.0,
+          "inspiration": 0.0
+        },
+        "topic": {
+          "craft": 1.0,
+          "ai": 0.0,
+          "money": 0.0,
+          "design": 0.0,
+          "other": 0.0,
+          "writing": 0.0,
+          "startups": 0.0,
+          "engineering": 0.0
+        },
+        "tags": {
+          "onboarding": 0.01,
+          "empty states": 0.01,
+          "landing page": 0.01,
+          "mobile app": 0.01,
+          "typography": 0.01,
+          "icons": 0.01,
+          "illustration": 0.02,
+          "animation": 0.01,
+          "design system": 0.01,
+          "ui patterns": 0.01,
+          "prompting": 0.01,
+          "ai agents": 0.02,
+          "coding tools": 0.01,
+          "claude": 0.01,
+          "open source": 0.01,
+          "essay": 0.96,
+          "productivity": 0.27,
+          "learning": 0.19,
+          "founders": 0.33,
+          "ideas": 0.07,
+          "branding": 0.03,
+          "writing style": 0.02,
+          "careers": 0.97
+        }
+      },
+      "shelfSource": "jev"
     }
   ]
 }
