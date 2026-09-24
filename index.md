@@ -1,9 +1,10 @@
 # Brain Vault
 
-20 things worth keeping. Browse them on the site, or here.
+21 things worth keeping. Browse them on the site, or here.
 
 | Saved | Title | Shelf | Topic | Note |
 |-------|-------|-------|-------|------|
+| 24 Sep 2026 | [Everything I know about good system design](https://www.seangoedecke.com/good-system-design/) | Reading | Software engineering |  |
 | 31 Mar 2026 | [interface-design · Claude Code Plugin](https://interface-design.dev/index.html) | Tools | Design |  |
 | 25 Mar 2026 | [Mobbin — UI & UX design inspiration for mobile & web appsMobbin](https://mobbin.com/) | Inspiration | Design |  |
 | 25 Mar 2026 | [Refero — UI/UX Design Inspiration for Your Next Project](https://refero.design/apps) | Inspiration | Design |  |

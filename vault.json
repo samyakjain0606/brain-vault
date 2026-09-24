@@ -1,7 +1,73 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24T00:58:39",
+  "updatedAt": "2026-09-24T07:53:58",
   "items": [
+    {
+      "id": "b0d11f664d",
+      "url": "https://www.seangoedecke.com/good-system-design/",
+      "type": "article",
+      "title": "Everything I know about good system design",
+      "description": "I see a lot of bad system design advice. One classic is the LinkedIn-optimized “bet you never heard of queues” style of post, presumably aimed at people who are…",
+      "note": "",
+      "source": "seangoedecke.com",
+      "host": "seangoedecke.com",
+      "image": "",
+      "screenshot": "",
+      "savedAt": "2026-09-24",
+      "shelf": "reading",
+      "topic": "engineering",
+      "tags": [
+        "essay",
+        "learning"
+      ],
+      "classifiedBy": "jev",
+      "needsReview": false,
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "inspiration": 0.0,
+          "reading": 1.0,
+          "post": 0.0,
+          "tool": 0.0
+        },
+        "topic": {
+          "craft": 0.0,
+          "money": 0.0,
+          "other": 0.0,
+          "design": 0.0,
+          "ai": 0.0,
+          "startups": 0.0,
+          "writing": 0.0,
+          "engineering": 1.0
+        },
+        "tags": {
+          "onboarding": 0.01,
+          "empty states": 0.01,
+          "landing page": 0.01,
+          "mobile app": 0.01,
+          "typography": 0.01,
+          "icons": 0.01,
+          "illustration": 0.04,
+          "animation": 0.01,
+          "design system": 0.02,
+          "ui patterns": 0.01,
+          "prompting": 0.01,
+          "ai agents": 0.02,
+          "coding tools": 0.02,
+          "claude": 0.01,
+          "open source": 0.01,
+          "essay": 0.75,
+          "productivity": 0.03,
+          "learning": 0.74,
+          "founders": 0.01,
+          "ideas": 0.04,
+          "branding": 0.03,
+          "writing style": 0.05,
+          "careers": 0.17
+        }
+      },
+      "shelfSource": "jev"
+    },
     {
       "id": "775886a769",
       "url": "https://interface-design.dev/index.html",
