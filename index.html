@@ -309,7 +309,7 @@
       <h2 class="nh">Hi, I’m Samyak 👋</h2>
       <p class="np">I save a lot of links and used to lose almost all of them. Bookmark folders, Notes, a dozen open tabs.</p>
       <p class="np">Brain Vault is what I built to fix that. Every save gets a line about why it mattered, and it files itself, so future me can actually use it.</p>
-      <div class="who"><span class="wav" id="about-avatar"></span><div><div>Samyak Jain</div><div class="wr">Builds Brain Vault</div></div></div>
+      <div class="who"><span class="wav" id="about-avatar"></span><div>Samyak Jain</div></div>
     </div>
     <div class="tiles" id="tiles"></div>
   </section>
@@ -323,12 +323,13 @@
     const img = e.target;
     if (!(img instanceof HTMLImageElement) || !img.src.includes("cdn.brandfetch.io/domain/")) return;
     const d = img.src.split("/domain/")[1].split("/")[0];
+    if (img.closest("[data-logo-only]")) { img.closest(".ct").remove(); return; }
     img.src = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(d)}&sz=128`;
   }, true);
 
   const CFG = window.BRAIN_VAULT || {};
   const repo = CFG.extensionRepo || "";
-  const logo = (d, sz = 64) => CFG.brandfetch ? `https://cdn.brandfetch.io/domain/${d}/w/${sz}/h/${sz}/fallback/lettermark/type/icon?c=${CFG.brandfetch}` : `https://www.google.com/s2/favicons?domain=${encodeURIComponent(d)}&sz=${sz}`;
+  const logo = (d, sz = 64) => CFG.brandfetch ? `https://cdn.brandfetch.io/domain/${d}/w/${sz}/h/${sz}/fallback/404/type/icon?c=${CFG.brandfetch}` : `https://www.google.com/s2/favicons?domain=${encodeURIComponent(d)}&sz=${sz}`;
   document.querySelectorAll("[data-repo-link]").forEach((a) => { a.href = `https://github.com/${repo}${a.dataset.repoLink}`; });
   document.querySelectorAll("[data-repo-text]").forEach((s) => { s.textContent = `github.com/${repo}`; });
   document.querySelectorAll("[data-repo-name]").forEach((s) => { s.textContent = repo; });
@@ -359,16 +360,48 @@
   }, { threshold: 0.35 });
   reels.forEach((r) => io.observe(r));
 
+  // Show the top sources that have a real brand logo (never lettermarks): load candidates hidden, keep the first n that load.
+  function logoTiles(tilesEl, domains, n, caption) {
+    tilesEl.setAttribute("data-logo-only", "");
+    tilesEl.replaceChildren();
+    const cands = domains.slice(0, 12).map((d) => {
+      const s = document.createElement("span"); s.className = "ct"; s.style.visibility = "hidden";
+      const im = new Image(); im.alt = d; s.append(im); tilesEl.append(s);
+      return { s, im, d };
+    });
+    const loaded = (c) => c.s.isConnected && c.im.complete && c.im.naturalWidth > 0;
+    let settled = false;
+    const settle = () => {
+      if (settled) return; settled = true;
+      const ok = cands.filter(loaded);
+      cands.forEach((c) => { if (!ok.slice(0, n).includes(c)) c.s.remove(); });
+      ok.slice(0, n).forEach((c) => { c.s.style.visibility = ""; });
+      if (!ok.length) { // Brandfetch unavailable: show the top sources' own favicons rather than an empty space
+        domains.slice(0, n).forEach((d) => {
+          const s = document.createElement("span"); s.className = "ct";
+          const im = new Image(); im.alt = d; im.src = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(d)}&sz=128`;
+          s.append(im); tilesEl.insertBefore(s, tilesEl.querySelector(".tcap"));
+        });
+      }
+    };
+    let left = cands.length;
+    cands.forEach((c) => {
+      const done = () => { if (--left === 0) settle(); };
+      c.im.addEventListener("load", done); c.im.addEventListener("error", done);
+      c.im.src = logo(c.d, 128);
+    });
+    setTimeout(settle, 3000);
+    const cap = document.createElement("span"); cap.className = "tcap"; cap.textContent = caption; tilesEl.append(cap);
+  }
+
   // Live numbers and sources from the vault itself.
   fetch("vault.json", { cache: "no-cache" }).then((r) => r.json()).then((d) => {
     const items = d.items || [];
     document.getElementById("vault-count").textContent = `${items.length} things`;
     const counts = {};
     items.forEach((i) => { try { const h = new URL(i.url).hostname.replace(/^www\./, ""); counts[h] = (counts[h] || 0) + 1; } catch {} });
-    const top = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 4);
-    const tiles = document.getElementById("tiles");
-    top.forEach(([h]) => { const s = document.createElement("span"); s.className = "ct"; const im = document.createElement("img"); im.alt = ""; im.src = logo(h, 128); s.append(im); tiles.append(s); });
-    const cap = document.createElement("span"); cap.className = "tcap"; cap.textContent = "Where Samyak’s saves come from"; tiles.append(cap);
+    const ranked = Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([d]) => d);
+    logoTiles(document.getElementById("tiles"), ranked, 4, "Where Samyak’s saves come from");
   }).catch(() => {});
 })();
 </script>
