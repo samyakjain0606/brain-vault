@@ -17,7 +17,9 @@
     owner: "Samyak",
     fullName: "Samyak Jain",
     github: "samyakjain0606",
-    extensionRepo: "samyakjain0606/brain-vault-extension"
+    extensionRepo: "samyakjain0606/brain-vault-extension",
+    // Brand icons from Brandfetch (free Logo API). Leave empty to use Google favicons instead.
+    brandfetch: "1idScdQmJQ6rROwjA8W"
   };
 </script>
 <style>
@@ -316,8 +318,17 @@
 
 <script>
 (() => {
+  // If a Brandfetch icon is ever refused, fall back to the Google favicon for that domain.
+  document.addEventListener("error", (e) => {
+    const img = e.target;
+    if (!(img instanceof HTMLImageElement) || !img.src.includes("cdn.brandfetch.io/domain/")) return;
+    const d = img.src.split("/domain/")[1].split("/")[0];
+    img.src = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(d)}&sz=128`;
+  }, true);
+
   const CFG = window.BRAIN_VAULT || {};
   const repo = CFG.extensionRepo || "";
+  const logo = (d, sz = 64) => CFG.brandfetch ? `https://cdn.brandfetch.io/domain/${d}/w/${sz}/h/${sz}/fallback/lettermark/type/icon?c=${CFG.brandfetch}` : `https://www.google.com/s2/favicons?domain=${encodeURIComponent(d)}&sz=${sz}`;
   document.querySelectorAll("[data-repo-link]").forEach((a) => { a.href = `https://github.com/${repo}${a.dataset.repoLink}`; });
   document.querySelectorAll("[data-repo-text]").forEach((s) => { s.textContent = `github.com/${repo}`; });
   document.querySelectorAll("[data-repo-name]").forEach((s) => { s.textContent = repo; });
@@ -356,7 +367,7 @@
     items.forEach((i) => { try { const h = new URL(i.url).hostname.replace(/^www\./, ""); counts[h] = (counts[h] || 0) + 1; } catch {} });
     const top = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 4);
     const tiles = document.getElementById("tiles");
-    top.forEach(([h]) => { const s = document.createElement("span"); s.className = "ct"; const im = document.createElement("img"); im.alt = ""; im.src = `https://www.google.com/s2/favicons?domain=${h}&sz=128`; s.append(im); tiles.append(s); });
+    top.forEach(([h]) => { const s = document.createElement("span"); s.className = "ct"; const im = document.createElement("img"); im.alt = ""; im.src = logo(h, 128); s.append(im); tiles.append(s); });
     const cap = document.createElement("span"); cap.className = "tcap"; cap.textContent = "Where Samyak’s saves come from"; tiles.append(cap);
   }).catch(() => {});
 })();

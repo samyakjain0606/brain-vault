@@ -16,6 +16,8 @@
     fullName: "Samyak Jain",
     github: "samyakjain0606",
     extensionRepo: "samyakjain0606/brain-vault-extension",
+    // Brand icons from Brandfetch (free Logo API). Leave empty to use Google favicons instead.
+    brandfetch: "1idScdQmJQ6rROwjA8W",
     about: [
       "I save a lot of links and used to lose almost all of them. Bookmark folders, Notes, a dozen open tabs.",
       "Now everything lands here with a line about why it mattered, so future me can actually use it."
@@ -383,6 +385,14 @@
 
 <script>
 (() => {
+  // If a Brandfetch icon is ever refused, fall back to the Google favicon for that domain.
+  document.addEventListener("error", (e) => {
+    const img = e.target;
+    if (!(img instanceof HTMLImageElement) || !img.src.includes("cdn.brandfetch.io/domain/")) return;
+    const d = img.src.split("/domain/")[1].split("/")[0];
+    img.src = `https://www.google.com/s2/favicons?domain=${encodeURIComponent(d)}&sz=128`;
+  }, true);
+
   const CFG = window.BRAIN_VAULT || {};
   const SHELVES = [
     { key: "reading", name: "Reading", desc: "Essays, articles and long reads." },
@@ -405,7 +415,8 @@
     return el;
   };
   const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch { return ""; } };
-  const fav = (u, sz = 64) => `https://www.google.com/s2/favicons?domain=${encodeURIComponent(host(u))}&sz=${sz}`;
+  const logo = (d, sz = 64) => CFG.brandfetch ? `https://cdn.brandfetch.io/domain/${d}/w/${sz}/h/${sz}/fallback/lettermark/type/icon?c=${CFG.brandfetch}` : `https://www.google.com/s2/favicons?domain=${encodeURIComponent(d)}&sz=${sz}`;
+  const fav = (u, sz = 64) => logo(host(u), sz);
   const fmtDate = (d) => { const x = new Date((d || "") + "T00:00:00"); return isNaN(x) ? "" : x.toLocaleDateString("en-GB", { day: "numeric", month: "short" }); };
   const shelfName = (k) => (SHELVES.find((s) => s.key === k) || {}).name || "";
   const imageOf = (i) => i.screenshot || i.image || "";
@@ -611,7 +622,7 @@
     const counts = {};
     items.forEach((i) => { const d = host(i.url); counts[d] = (counts[d] || 0) + 1; });
     const top = Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 4);
-    $("#tiles").replaceChildren(...top.map(([d]) => h("span", { class: "ct" }, h("img", { src: `https://www.google.com/s2/favicons?domain=${d}&sz=128`, alt: d }))),
+    $("#tiles").replaceChildren(...top.map(([d]) => h("span", { class: "ct" }, h("img", { src: logo(d, 128), alt: d }))),
       h("span", { class: "tcap" }, "Where most of it comes from"));
     const repo = CFG.extensionRepo || "";
     document.querySelectorAll("[data-repo-link]").forEach((a) => { a.href = `https://github.com/${repo}${a.dataset.repoLink}`; });
