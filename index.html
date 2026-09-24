@@ -128,6 +128,31 @@
   .repon { font-size: 17px; font-weight: 500; }
   .repod { font-size: 14px; color: var(--muted); margin-top: 2px; }
 
+  .claude { margin-top: 44px; border-radius: 28px; background: var(--sky); padding: 48px; display: grid;
+            grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: 44px; align-items: center; text-align: left; }
+  .cl-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 18px; min-width: 0; }
+  .cl-h { font-size: 36px; font-weight: 500; letter-spacing: -1.1px; line-height: 1.08; }
+  .claude .pdesc { font-size: 17px; }
+  .copy { display: flex; align-items: center; gap: 12px; max-width: 100%; background: #fff; border: 1px solid rgba(42,42,39,.08);
+          border-radius: 12px; padding: 8px 8px 8px 14px; font-size: 13px; box-shadow: 0 8px 24px rgba(52,70,110,.10); text-align: left; }
+  .copy .mono { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  .copy .dim { color: var(--muted); }
+  .copy-l { flex: none; background: var(--ink); color: #fff; border-radius: 8px; padding: 7px 12px; font-size: 13px; font-weight: 500; }
+  .cl-link { font-size: 15px; color: var(--soft); }
+  .term { background: #fff; border-radius: 14px; overflow: hidden; min-width: 0;
+          box-shadow: 0 30px 70px rgba(52,70,110,.22), 0 0 0 1px rgba(42,42,39,.06); }
+  .term .bar { height: 30px; display: flex; align-items: center; gap: 7px; padding: 0 12px; background: #F1F0EB; }
+  .term .addr { margin-left: 10px; font-size: 11px; color: var(--soft); background: #fff; border-radius: 999px; padding: 3px 10px; font-family: var(--mono); }
+  .tbody { font-family: var(--mono); font-size: 13px; line-height: 1.8; padding: 18px 22px 22px; }
+  .ln { white-space: pre-wrap; overflow-wrap: anywhere; opacity: 0; transform: translateY(5px);
+        transition: opacity .4s ease, transform .4s ease; transition-delay: calc(var(--i) * 260ms); }
+  .ln.sp { margin-top: 14px; }
+  .term.in .ln { opacity: 1; transform: none; }
+  .tbody .dim { color: var(--muted); } .tbody .ok { color: #2B7F59; } .tbody .you { color: var(--violet); } .tbody .go { color: var(--blue); }
+  .byhand { font-size: 24px; font-weight: 500; letter-spacing: -0.5px; margin-top: 72px; }
+  .steps { grid-template-columns: repeat(4, minmax(0,1fr)); margin-top: 28px; }
+  .steps .code { white-space: normal; overflow-wrap: anywhere; }
+
   /* About */
   .note { max-width: 1120px; margin: 150px auto 0; background: #fff; border-radius: 24px; box-shadow: 0 30px 80px rgba(42,42,39,.08), 0 0 0 1px rgba(42,42,39,.04);
           padding: 64px 80px; display: grid; grid-template-columns: minmax(0,1.2fr) minmax(0,1fr); gap: 48px; align-items: center; text-align: left; }
@@ -152,7 +177,10 @@
     .links { display: none; }
     h1 { font-size: 46px; letter-spacing: -1.4px; }
     h2, .showcase h2 { font-size: 38px; letter-spacing: -1px; }
-    .two, .steps, .note, .showcase { grid-template-columns: minmax(0,1fr); }
+    .two, .note, .showcase, .claude { grid-template-columns: minmax(0,1fr); }
+    .steps { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .claude { padding: 28px 20px; gap: 28px; }
+    .cl-h { font-size: 28px; }
     .shelves { grid-template-columns: repeat(2, minmax(0,1fr)); }
     .panel { padding: 20px; }
     .showcase { padding: 32px 24px; }
@@ -160,7 +188,8 @@
     .tiles { height: 290px; }
     .reel.hero-reel { margin-top: 40px; border-radius: 18px; }
   }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  @media (max-width: 600px) { .steps { grid-template-columns: minmax(0,1fr); } .tbody { font-size: 12px; padding: 14px 16px 18px; } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .ln { opacity: 1; transform: none; transition: none; } }
 </style>
 </head>
 <body>
@@ -179,7 +208,7 @@
     <h1>Every good link, sorted.</h1>
     <p class="sub">Brain Vault is a Chrome extension for saving articles, posts and app inspiration with a note on why. <a class="hl" href="#jev">Jev files each one →</a> and your library publishes to your own site.</p>
     <div class="btns">
-      <a class="btn dark" data-repo-link="/releases/latest">Download for Chrome</a>
+      <a class="btn dark" href="#get">Get it free</a>
       <a class="btn light" href="vault.html">See Samyak’s vault <span class="chev">›</span></a>
     </div>
   </header>
@@ -279,26 +308,54 @@
   <section class="sec" id="get">
     <span class="pill">Free and open source</span>
     <h2>Make your own Brain Vault.</h2>
-    <p class="lede">A Chrome extension plus a small local helper. Your vault lives in your own GitHub repo, and nothing is stored anywhere else.</p>
-    <div class="btns">
-      <a class="btn dark" data-repo-link="/releases/latest">Download the extension</a>
-      <a class="btn light" data-repo-link="">View on GitHub <span class="chev">›</span></a>
+    <p class="lede">It takes three things: the extension, a GitHub repo for your vault, and a small helper on your computer. Claude can set up all three for you.</p>
+
+    <div class="claude">
+      <div class="cl-copy">
+        <span class="ptag">With Claude Code</span>
+        <h3 class="cl-h">One command, then just ask.</h3>
+        <p class="pdesc">Add the Brain Vault skill, open Claude Code and say “set up my Brain Vault”. It creates your vault repo, turns on GitHub Pages, starts the helper, and walks you through the one click Chrome needs from you.</p>
+        <button class="copy" data-copy="npx skills add samyakjain0606/brain-vault-extension -g" aria-label="Copy the install command">
+          <span class="mono"><span class="dim">$</span> npx skills add samyakjain0606/brain-vault-extension -g</span><span class="copy-l">Copy</span>
+        </button>
+        <a class="cl-link" data-repo-link="/blob/main/skills/brain-vault-setup/SKILL.md">Read what the skill does <span class="chev">›</span></a>
+      </div>
+      <div class="term" role="img" aria-label="A terminal: the skill is installed, then Claude clones the extension, creates the vault repo, turns on GitHub Pages, starts the helper and publishes a first save.">
+        <div class="bar"><span class="tl r"></span><span class="tl y"></span><span class="tl g"></span><span class="addr">~ zsh</span></div>
+        <div class="tbody">
+          <div class="ln" style="--i:0"><span class="dim">$</span> npx skills add samyakjain0606/brain-vault-extension -g</div>
+          <div class="ln" style="--i:1"><span class="ok">✓</span> Installed brain-vault-setup</div>
+          <div class="ln sp" style="--i:2"><span class="dim">$</span> claude</div>
+          <div class="ln" style="--i:3"><span class="you">› set up my Brain Vault</span></div>
+          <div class="ln sp" style="--i:4"><span class="ok">✓</span> Cloned the extension</div>
+          <div class="ln" style="--i:5"><span class="ok">✓</span> Created github.com/you/brain-vault</div>
+          <div class="ln" style="--i:6"><span class="ok">✓</span> Turned on GitHub Pages</div>
+          <div class="ln" style="--i:7"><span class="ok">✓</span> Helper running, starts at login</div>
+          <div class="ln" style="--i:8"><span class="go">→</span> Your turn: Load unpacked in chrome://extensions</div>
+          <div class="ln" style="--i:9"><span class="ok">✓</span> First save is live at you.github.io/brain-vault</div>
+        </div>
+      </div>
     </div>
+
+    <h3 class="byhand">Or set it up yourself</h3>
     <div class="steps">
       <div class="panel"><span class="sn">1</span><h3 class="st">Get the code</h3>
-        <p class="sd">Clone the repo, or use it as a template so your vault lives in your own GitHub account.</p>
+        <p class="sd">Clone the extension. It has the Chrome extension, the helper and the site.</p>
         <div class="code"><span class="dim">$</span> git clone <span data-repo-text></span></div></div>
-      <div class="panel"><span class="sn">2</span><h3 class="st">Add it to Chrome</h3>
-        <p class="sd">Open chrome://extensions, turn on Developer mode, and load the extension folder.</p>
-        <div class="code"><span class="dim">chrome://</span>extensions → Load unpacked</div></div>
-      <div class="panel"><span class="sn">3</span><h3 class="st">Start saving</h3>
-        <p class="sd">Add your TypeSafe key for Jev, then run the helper. Your first save can go live the same minute.</p>
-        <div class="code"><span class="dim">$</span> python3 bridge/server.py</div></div>
+      <div class="panel"><span class="sn">2</span><h3 class="st">Make your vault repo</h3>
+        <p class="sd">Create a GitHub repo, copy the site into it, and turn on GitHub Pages.</p>
+        <div class="code"><span class="dim">$</span> cp site/* ~/brain-vault</div></div>
+      <div class="panel"><span class="sn">3</span><h3 class="st">Start the helper</h3>
+        <p class="sd">Add your TypeSafe key for Jev to bridge/.env. The helper keeps running after restarts.</p>
+        <div class="code"><span class="dim">$</span> bridge/install-service.sh</div></div>
+      <div class="panel"><span class="sn">4</span><h3 class="st">Add it to Chrome</h3>
+        <p class="sd">Turn on Developer mode, click Load unpacked, and pick the extension folder.</p>
+        <div class="code"><span class="dim">chrome://</span>extensions</div></div>
     </div>
     <div class="repo">
       <div class="repol">
         <span class="gh"><img src="https://www.google.com/s2/favicons?domain=github.com&sz=64" alt=""></span>
-        <div><div class="repon" data-repo-name></div><div class="repod">Extension, local helper and site. MIT licensed.</div></div>
+        <div><div class="repon" data-repo-name></div><div class="repod">Extension, helper, site and setup skill. MIT licensed.</div></div>
       </div>
       <a class="btn light" data-repo-link="">Star on GitHub <span class="chev">›</span></a>
     </div>
@@ -337,6 +394,20 @@
     const img = document.createElement("img");
     img.src = `https://github.com/${CFG.github}.png?size=104`; img.alt = "";
     document.getElementById("about-avatar").append(img);
+  }
+
+  // Setup: copy the install command, and play the terminal once it scrolls into view.
+  document.querySelectorAll("[data-copy]").forEach((b) => b.addEventListener("click", async () => {
+    const label = b.querySelector(".copy-l");
+    try { await navigator.clipboard.writeText(b.dataset.copy); label.textContent = "Copied"; }
+    catch { label.textContent = "Press ⌘C"; getSelection().selectAllChildren(b.querySelector(".mono")); }
+    setTimeout(() => { label.textContent = "Copy"; }, 1800);
+  }));
+  const term = document.querySelector(".term");
+  if (term) {
+    if (!("IntersectionObserver" in window)) term.classList.add("in");
+    else new IntersectionObserver((es, io) => es.forEach((e) => { if (e.isIntersecting) { term.classList.add("in"); io.disconnect(); } }),
+      { threshold: 0.35 }).observe(term);
   }
 
   // Videos: play only while on screen; respect reduced motion; moonjar-style pause button.

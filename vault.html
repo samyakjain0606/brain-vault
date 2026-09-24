@@ -474,7 +474,7 @@
       class: o.key === shelf ? "sg on" : "sg", role: "tab", "aria-selected": String(o.key === shelf),
       onclick: () => setShelf(o.key),
     }, o.name, h("span", { class: "sgc" }, o.n))));
-    $("#count-title").textContent = `${items.length} things worth keeping.`;
+    $("#count-title").textContent = `${items.length} ${items.length === 1 ? "thing" : "things"} worth keeping.`;
   }
 
   function setShelf(key) {
