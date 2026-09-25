@@ -1,7 +1,73 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-24T07:53:58",
+  "updatedAt": "2026-09-25T14:34:38",
   "items": [
+    {
+      "id": "dfd18c756e",
+      "url": "https://inspomcp.dev/",
+      "type": "article",
+      "title": "Inspo - Real websites worth studying.",
+      "description": "A reference layer for AI coding agents - real production sites with desktop and mobile captures, canonical reference components, and a DESIGN.md per site, all queryable from one MCP server.",
+      "note": "",
+      "source": "inspomcp.dev",
+      "host": "inspomcp.dev",
+      "image": "https://inspomcp.dev/opengraph-image.png?opengraph-image.0zquvc8g5wnia.png",
+      "screenshot": "shots/2026-09-25-196cec11.jpg",
+      "savedAt": "2026-09-25",
+      "shelf": "inspiration",
+      "topic": "ai",
+      "tags": [
+        "ui patterns",
+        "ai agents"
+      ],
+      "classifiedBy": "jev",
+      "needsReview": false,
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "tool": 0.63,
+          "post": 0.0,
+          "inspiration": 0.37,
+          "reading": 0.0
+        },
+        "topic": {
+          "ai": 0.52,
+          "craft": 0.0,
+          "startups": 0.0,
+          "design": 0.48,
+          "money": 0.0,
+          "other": 0.0,
+          "engineering": 0.0,
+          "writing": 0.0
+        },
+        "tags": {
+          "onboarding": 0.03,
+          "empty states": 0.03,
+          "landing page": 0.44,
+          "mobile app": 0.07,
+          "typography": 0.1,
+          "icons": 0.09,
+          "illustration": 0.21,
+          "animation": 0.06,
+          "design system": 0.34,
+          "ui patterns": 0.96,
+          "prompting": 0.11,
+          "ai agents": 0.84,
+          "coding tools": 0.58,
+          "claude": 0.04,
+          "open source": 0.34,
+          "essay": 0.01,
+          "productivity": 0.05,
+          "learning": 0.4,
+          "founders": 0.01,
+          "ideas": 0.04,
+          "branding": 0.1,
+          "writing style": 0.02,
+          "careers": 0.02
+        }
+      },
+      "shelfSource": "user"
+    },
     {
       "id": "b0d11f664d",
       "url": "https://www.seangoedecke.com/good-system-design/",

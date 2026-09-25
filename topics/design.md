@@ -8,7 +8,7 @@ Tags: claude, coding tools, design system, ai agents
 
 ---
 
-### [Mobbin — UI & UX design inspiration for mobile & web appsMobbin](https://mobbin.com/)
+### [Mobbin — UI & UX design inspiration for mobile & web apps](https://mobbin.com/)
 > Save hours of UI & UX research with our library of 400,000+ fully searchable mobile & web app screenshots.
 
 Inspiration · mobbin.com · 25 Mar 2026

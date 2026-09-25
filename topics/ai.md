@@ -1,5 +1,13 @@
 # AI and agents
 
+### [Inspo - Real websites worth studying.](https://inspomcp.dev/)
+> A reference layer for AI coding agents - real production sites with desktop and mobile captures, canonical reference components, and a DESIGN.md per site, all queryable from one MCP server.
+
+Inspiration · inspomcp.dev · 25 Sep 2026
+Tags: ui patterns, ai agents
+
+---
+
 ### [dkyazzentwatwa/chatgpt-skills](https://github.com/dkyazzentwatwa/chatgpt-skills/tree/main)
 > My comprehensive, tested + audited, library of skills to use for ChatGPT.  - dkyazzentwatwa/chatgpt-skills
 
