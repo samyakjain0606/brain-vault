@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-01T16:17:35",
+  "updatedAt": "2026-10-01T21:12:20",
   "items": [
     {
       "id": "1f654a304d",
@@ -64,6 +64,71 @@
           "branding": 0.2,
           "writing style": 0.01,
           "careers": 0.02
+        }
+      },
+      "shelfSource": "jev"
+    },
+    {
+      "id": "3da332f1e6",
+      "url": "https://metalforge.xyz/",
+      "type": "article",
+      "title": "MetalForge — Shaders for SwiftUI, React Native & Web",
+      "description": "Beautiful shaders for SwiftUI, React Native and the web, without writing shader code. Tweak sliders, then take the code: a real .metal file, a Skia shader or a web component.",
+      "note": "",
+      "source": "metalforge.xyz",
+      "host": "metalforge.xyz",
+      "image": "https://metalforge.xyz/opengraph-image?a141757d4af8ef88",
+      "screenshot": "",
+      "savedAt": "2026-10-01",
+      "shelf": "tool",
+      "topic": "design",
+      "tags": [
+        "animation"
+      ],
+      "classifiedBy": "jev",
+      "needsReview": false,
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "post": 0.0,
+          "inspiration": 0.01,
+          "reading": 0.0,
+          "tool": 0.99
+        },
+        "topic": {
+          "design": 0.57,
+          "engineering": 0.43,
+          "writing": 0.0,
+          "startups": 0.0,
+          "craft": 0.0,
+          "money": 0.0,
+          "ai": 0.0,
+          "other": 0.0
+        },
+        "tags": {
+          "onboarding": 0.02,
+          "empty states": 0.02,
+          "landing page": 0.03,
+          "mobile app": 0.11,
+          "typography": 0.02,
+          "icons": 0.06,
+          "illustration": 0.09,
+          "animation": 0.79,
+          "design system": 0.31,
+          "ui patterns": 0.18,
+          "prompting": 0.02,
+          "ai agents": 0.26,
+          "coding tools": 0.43,
+          "claude": 0.03,
+          "open source": 0.12,
+          "essay": 0.01,
+          "productivity": 0.03,
+          "learning": 0.12,
+          "founders": 0.01,
+          "ideas": 0.03,
+          "branding": 0.23,
+          "writing style": 0.01,
+          "careers": 0.01
         }
       },
       "shelfSource": "jev"

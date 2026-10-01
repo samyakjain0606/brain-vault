@@ -1,10 +1,11 @@
 # Brain Vault
 
-23 things worth keeping. Browse them on the site, or here.
+24 things worth keeping. Browse them on the site, or here.
 
 | Saved | Title | Shelf | Topic | Note |
 |-------|-------|-------|-------|------|
 | 1 Oct 2026 | [AI Screenshots & App Mockups for Mac](https://moonjar.ai/) | Tools | AI and agents |  |
+| 1 Oct 2026 | [MetalForge — Shaders for SwiftUI, React Native & Web](https://metalforge.xyz/) | Tools | Design |  |
 | 25 Sep 2026 | [Inspo - Real websites worth studying.](https://inspomcp.dev/) | Inspiration | AI and agents |  |
 | 24 Sep 2026 | [Everything I know about good system design](https://www.seangoedecke.com/good-system-design/) | Reading | Software engineering |  |
 | 31 Mar 2026 | [interface-design · Claude Code Plugin](https://interface-design.dev/index.html) | Tools | Design |  |

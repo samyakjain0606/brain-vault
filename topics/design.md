@@ -1,5 +1,13 @@
 # Design
 
+### [MetalForge — Shaders for SwiftUI, React Native & Web](https://metalforge.xyz/)
+> Beautiful shaders for SwiftUI, React Native and the web, without writing shader code. Tweak sliders, then take the code: a real .metal file, a Skia shader or a web component.
+
+Tools · metalforge.xyz · 1 Oct 2026
+Tags: animation
+
+---
+
 ### [interface-design · Claude Code Plugin](https://interface-design.dev/index.html)
 > Stop redeciding the same design choices every conversation
 
