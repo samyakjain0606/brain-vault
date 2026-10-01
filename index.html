@@ -17,6 +17,8 @@
     owner: "Samyak",
     fullName: "Samyak Jain",
     github: "samyakjain0606",
+    x: "Samyak0606",          // X (Twitter) username, shown in the About card and footer
+    instagram: "shipitwithai", // Instagram username
     extensionRepo: "samyakjain0606/brain-vault-extension",
     // Brand icons from Brandfetch (free Logo API). Leave empty to use Google favicons instead.
     brandfetch: "1idScdQmJQ6rROwjA8W"
@@ -161,6 +163,11 @@
   .who { display: flex; align-items: center; gap: 14px; margin-top: 36px; }
   .wav { width: 52px; height: 52px; border-radius: 50%; overflow: hidden; background: linear-gradient(145deg,#FFE0C9,#F7B98F); }
   .wr { font-size: 15px; color: var(--muted); }
+  .socials { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+  .social { display: inline-flex; align-items: center; gap: 8px; padding: 9px 15px; border-radius: 999px; border: 1px solid var(--line);
+            background: #fff; font-size: 14px; color: var(--ink); }
+  .social:hover { opacity: 1; background: var(--bg); }
+  .social svg { width: 15px; height: 15px; flex: none; }
   .tiles { position: relative; height: 320px; }
   .ct { position: absolute; width: 128px; height: 128px; border-radius: 30px; background: #fff; box-shadow: 0 18px 40px rgba(42,42,39,.14), 0 0 0 1px rgba(42,42,39,.05);
         display: flex; align-items: center; justify-content: center; }
@@ -367,11 +374,12 @@
       <p class="np">I save a lot of links and used to lose almost all of them. Bookmark folders, Notes, a dozen open tabs.</p>
       <p class="np">Brain Vault is what I built to fix that. Every save gets a line about why it mattered, and it files itself, so future me can actually use it.</p>
       <div class="who"><span class="wav" id="about-avatar"></span><div>Samyak Jain</div></div>
+      <div class="socials" id="socials" hidden></div>
     </div>
     <div class="tiles" id="tiles"></div>
   </section>
 
-  <footer class="foot"><span>Brain Vault. Saved from Chrome, sorted by Jev.</span><a href="vault.html">Samyak’s vault</a><a data-repo-link="">GitHub</a></footer>
+  <footer class="foot"><span>Brain Vault. Saved from Chrome, sorted by Jev.</span><a href="vault.html">Samyak’s vault</a><a data-repo-link="">GitHub</a><a data-social="x">X</a><a data-social="instagram">Instagram</a></footer>
 
 <script>
 (() => {
@@ -395,6 +403,28 @@
     img.src = `https://github.com/${CFG.github}.png?size=104`; img.alt = "";
     document.getElementById("about-avatar").append(img);
   }
+
+  // Social profiles from the config: pills in the About card, plain links in the footer.
+  const SOCIALS = [
+    { key: "x", label: "X", url: (u) => `https://x.com/${u}`,
+      icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>' },
+    { key: "instagram", label: "Instagram", url: (u) => `https://www.instagram.com/${u}/`,
+      icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>' },
+  ].filter((s) => CFG[s.key]).map((s) => ({ ...s, handle: String(CFG[s.key]).replace(/^@/, "") }));
+  const socialsEl = document.getElementById("socials");
+  SOCIALS.forEach((s) => {
+    const a = document.createElement("a");
+    a.className = "social"; a.href = s.url(s.handle); a.target = "_blank"; a.rel = "me noopener";
+    a.setAttribute("aria-label", `${s.label}: @${s.handle}`);
+    a.innerHTML = s.icon; a.append(`@${s.handle}`);
+    socialsEl.append(a);
+  });
+  socialsEl.hidden = !SOCIALS.length;
+  document.querySelectorAll("[data-social]").forEach((a) => {
+    const s = SOCIALS.find((x) => x.key === a.dataset.social);
+    if (!s) { a.remove(); return; }
+    a.href = s.url(s.handle); a.target = "_blank"; a.rel = "me noopener";
+  });
 
   // Setup: copy the install command, and play the terminal once it scrolls into view.
   document.querySelectorAll("[data-copy]").forEach((b) => b.addEventListener("click", async () => {
