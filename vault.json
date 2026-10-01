@@ -1,7 +1,73 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-25T14:34:38",
+  "updatedAt": "2026-10-01T16:17:35",
   "items": [
+    {
+      "id": "1f654a304d",
+      "url": "https://moonjar.ai/",
+      "type": "article",
+      "title": "AI Screenshots & App Mockups for Mac",
+      "description": "Give your coding agents a studio for app marketing. Create screenshots, device mockups and App Store images with Moonjar for Mac. Join early access.",
+      "note": "",
+      "source": "moonjar.ai",
+      "host": "moonjar.ai",
+      "image": "https://framerusercontent.com/images/p2oBHB8TBrj8GdVxYeRdWFkczMs.jpg",
+      "screenshot": "",
+      "savedAt": "2026-10-01",
+      "shelf": "tool",
+      "topic": "ai",
+      "tags": [
+        "ai agents",
+        "mobile app"
+      ],
+      "classifiedBy": "jev",
+      "needsReview": false,
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "reading": 0.0,
+          "post": 0.0,
+          "inspiration": 0.04,
+          "tool": 0.96
+        },
+        "topic": {
+          "engineering": 0.0,
+          "craft": 0.0,
+          "money": 0.0,
+          "other": 0.0,
+          "ai": 0.87,
+          "startups": 0.0,
+          "design": 0.13,
+          "writing": 0.0
+        },
+        "tags": {
+          "onboarding": 0.04,
+          "empty states": 0.03,
+          "landing page": 0.03,
+          "mobile app": 0.62,
+          "typography": 0.07,
+          "icons": 0.04,
+          "illustration": 0.35,
+          "animation": 0.21,
+          "design system": 0.06,
+          "ui patterns": 0.07,
+          "prompting": 0.09,
+          "ai agents": 0.94,
+          "coding tools": 0.13,
+          "claude": 0.31,
+          "open source": 0.03,
+          "essay": 0.01,
+          "productivity": 0.34,
+          "learning": 0.08,
+          "founders": 0.02,
+          "ideas": 0.03,
+          "branding": 0.2,
+          "writing style": 0.01,
+          "careers": 0.02
+        }
+      },
+      "shelfSource": "jev"
+    },
     {
       "id": "dfd18c756e",
       "url": "https://inspomcp.dev/",

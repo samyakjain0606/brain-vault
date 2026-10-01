@@ -1,5 +1,13 @@
 # AI and agents
 
+### [AI Screenshots & App Mockups for Mac](https://moonjar.ai/)
+> Give your coding agents a studio for app marketing. Create screenshots, device mockups and App Store images with Moonjar for Mac. Join early access.
+
+Tools · moonjar.ai · 1 Oct 2026
+Tags: ai agents, mobile app
+
+---
+
 ### [Inspo - Real websites worth studying.](https://inspomcp.dev/)
 > A reference layer for AI coding agents - real production sites with desktop and mobile captures, canonical reference components, and a DESIGN.md per site, all queryable from one MCP server.
 
