@@ -4,7 +4,7 @@
 
 | Saved | Title | Shelf | Topic | Note |
 |-------|-------|-------|-------|------|
-| 1 Oct 2026 | [AI Screenshots & App Mockups for Mac](https://moonjar.ai/) | Tools | AI and agents |  |
+| 3 Oct 2026 | [this launch video generated 2.4M+ views.](https://x.com/rajsinghfirst/status/2105982898675614085?s=20) | Posts | Startups and product | Launch video inspiration |
 | 1 Oct 2026 | [MetalForge — Shaders for SwiftUI, React Native & Web](https://metalforge.xyz/) | Tools | Design |  |
 | 25 Sep 2026 | [Inspo - Real websites worth studying.](https://inspomcp.dev/) | Inspiration | AI and agents |  |
 | 24 Sep 2026 | [Everything I know about good system design](https://www.seangoedecke.com/good-system-design/) | Reading | Software engineering |  |
