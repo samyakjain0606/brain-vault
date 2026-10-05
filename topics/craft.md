@@ -1,5 +1,13 @@
 # Work and craft
 
+### [Recommended reading/viewing](https://mariozechner.at/recommended-reading/)
+> Articles and videos I recommended on socials.
+
+Reading · mariozechner.at · 6 Oct 2026
+Tags: learning
+
+---
+
 ### [How to Work Hard](https://paulgraham.com/hwh.html)
 
 Reading · paulgraham.com · 6 Mar 2026

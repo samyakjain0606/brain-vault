@@ -1,7 +1,72 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-03T12:56:55",
+  "updatedAt": "2026-10-06T00:46:01",
   "items": [
+    {
+      "id": "64033a3757",
+      "url": "https://mariozechner.at/recommended-reading/",
+      "type": "article",
+      "title": "Recommended reading/viewing",
+      "description": "Articles and videos I recommended on socials.",
+      "note": "",
+      "source": "mariozechner.at",
+      "host": "mariozechner.at",
+      "image": "https://mariozechner.at/img/band.png",
+      "screenshot": "",
+      "savedAt": "2026-10-06",
+      "shelf": "reading",
+      "topic": "craft",
+      "tags": [
+        "learning"
+      ],
+      "classifiedBy": "jev",
+      "needsReview": false,
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "reading": 0.75,
+          "post": 0.0,
+          "inspiration": 0.0,
+          "tool": 0.25
+        },
+        "topic": {
+          "ai": 0.03,
+          "engineering": 0.09,
+          "design": 0.01,
+          "startups": 0.05,
+          "craft": 0.62,
+          "writing": 0.04,
+          "money": 0.0,
+          "other": 0.16
+        },
+        "tags": {
+          "onboarding": 0.03,
+          "empty states": 0.02,
+          "landing page": 0.07,
+          "mobile app": 0.02,
+          "typography": 0.02,
+          "icons": 0.02,
+          "illustration": 0.03,
+          "animation": 0.07,
+          "design system": 0.03,
+          "ui patterns": 0.02,
+          "prompting": 0.05,
+          "ai agents": 0.07,
+          "coding tools": 0.03,
+          "claude": 0.02,
+          "open source": 0.02,
+          "essay": 0.02,
+          "productivity": 0.21,
+          "learning": 0.73,
+          "founders": 0.07,
+          "ideas": 0.08,
+          "branding": 0.05,
+          "writing style": 0.05,
+          "careers": 0.16
+        }
+      },
+      "shelfSource": "jev"
+    },
     {
       "id": "9116f3a07d",
       "url": "https://x.com/rajsinghfirst/status/2105982898675614085?s=20",
