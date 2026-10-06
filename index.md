@@ -1,10 +1,11 @@
 # Brain Vault
 
-25 things worth keeping. Browse them on the site, or here.
+26 things worth keeping. Browse them on the site, or here.
 
 | Saved | Title | Shelf | Topic | Note |
 |-------|-------|-------|-------|------|
 | 6 Oct 2026 | [Recommended reading/viewing](https://mariozechner.at/recommended-reading/) | Reading | Work and craft |  |
+| 6 Oct 2026 | [Startup & Product Launch Videos from X](https://whatships.com/) | Tools | Startups and product |  |
 | 3 Oct 2026 | [this launch video generated 2.4M+ views.](https://x.com/rajsinghfirst/status/2105982898675614085?s=20) | Posts | Startups and product | Launch video inspiration |
 | 1 Oct 2026 | [MetalForge — Shaders for SwiftUI, React Native & Web](https://metalforge.xyz/) | Tools | Design |  |
 | 25 Sep 2026 | [Inspo - Real websites worth studying.](https://inspomcp.dev/) | Inspiration | AI and agents |  |

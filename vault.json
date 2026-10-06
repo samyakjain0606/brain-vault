@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-06T00:46:01",
+  "updatedAt": "2026-10-06T16:11:52",
   "items": [
     {
       "id": "64033a3757",
@@ -63,6 +63,69 @@
           "branding": 0.05,
           "writing style": 0.05,
           "careers": 0.16
+        }
+      },
+      "shelfSource": "jev"
+    },
+    {
+      "id": "565987de9d",
+      "url": "https://whatships.com/",
+      "type": "article",
+      "title": "Startup & Product Launch Videos from X",
+      "description": "What Ships is a curated directory of 2,000+ startup launch videos from X. Browse product launch videos, demos, and walkthroughs linked to the original post.",
+      "note": "",
+      "source": "whatships.com",
+      "host": "whatships.com",
+      "image": "https://whatships.com/og-default.png",
+      "screenshot": "",
+      "savedAt": "2026-10-06",
+      "shelf": "tool",
+      "topic": "startups",
+      "tags": [],
+      "classifiedBy": "jev",
+      "needsReview": false,
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "inspiration": 0.33,
+          "reading": 0.0,
+          "post": 0.0,
+          "tool": 0.67
+        },
+        "topic": {
+          "other": 0.0,
+          "engineering": 0.01,
+          "startups": 0.98,
+          "ai": 0.01,
+          "design": 0.0,
+          "writing": 0.0,
+          "craft": 0.0,
+          "money": 0.0
+        },
+        "tags": {
+          "onboarding": 0.05,
+          "empty states": 0.02,
+          "landing page": 0.02,
+          "mobile app": 0.06,
+          "typography": 0.02,
+          "icons": 0.02,
+          "illustration": 0.03,
+          "animation": 0.16,
+          "design system": 0.03,
+          "ui patterns": 0.08,
+          "prompting": 0.02,
+          "ai agents": 0.3,
+          "coding tools": 0.14,
+          "claude": 0.02,
+          "open source": 0.02,
+          "essay": 0.01,
+          "productivity": 0.19,
+          "learning": 0.08,
+          "founders": 0.04,
+          "ideas": 0.02,
+          "branding": 0.07,
+          "writing style": 0.01,
+          "careers": 0.02
         }
       },
       "shelfSource": "jev"
