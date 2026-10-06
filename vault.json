@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-06T16:11:52",
+  "updatedAt": "2026-10-06T21:38:03",
   "items": [
     {
       "id": "64033a3757",
@@ -129,6 +129,72 @@
         }
       },
       "shelfSource": "jev"
+    },
+    {
+      "id": "cfa3dafee4",
+      "url": "https://x.com/PerezHatesAI/status/2107132379123077221?s=20",
+      "type": "tweet",
+      "title": "I need to sit down 😭",
+      "description": "",
+      "note": "Reaction video for Apps",
+      "source": "X",
+      "host": "x.com",
+      "image": "",
+      "screenshot": "",
+      "savedAt": "2026-10-06",
+      "author": "Pedro Pérez",
+      "handle": "PerezHatesAI",
+      "text": "I need to sit down 😭\n\n29.3M views.\n376K saves.\n121K shares.\n\nFor a meal planning app.\n\nThe hook isn't the app.\nIt's this line:\n\n\"been shopping at Aldi literally for 7 years and I'm JUST NOWWW FINDING THIS????\"\n\nwhy it works:\n> she borrows a store everyone already shops at\n> \"7… pic.twitter.com/BCS1xVoMlt",
+      "shelf": "post",
+      "topic": "writing",
+      "tags": [],
+      "classifiedBy": "jev",
+      "needsReview": false,
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "tool": 0.0,
+          "inspiration": 0.25,
+          "post": 0.71,
+          "reading": 0.04
+        },
+        "topic": {
+          "craft": 0.0,
+          "other": 0.0,
+          "ai": 0.01,
+          "design": 0.0,
+          "writing": 0.91,
+          "engineering": 0.0,
+          "money": 0.0,
+          "startups": 0.08
+        },
+        "tags": {
+          "onboarding": 0.09,
+          "empty states": 0.02,
+          "landing page": 0.04,
+          "mobile app": 0.27,
+          "typography": 0.01,
+          "icons": 0.02,
+          "illustration": 0.02,
+          "animation": 0.03,
+          "design system": 0.02,
+          "ui patterns": 0.03,
+          "prompting": 0.02,
+          "ai agents": 0.03,
+          "coding tools": 0.02,
+          "claude": 0.01,
+          "open source": 0.01,
+          "essay": 0.04,
+          "productivity": 0.18,
+          "learning": 0.21,
+          "founders": 0.04,
+          "ideas": 0.37,
+          "branding": 0.43,
+          "writing style": 0.14,
+          "careers": 0.04
+        }
+      },
+      "shelfSource": "url"
     },
     {
       "id": "9116f3a07d",
