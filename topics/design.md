@@ -1,5 +1,13 @@
 # Design
 
+### [introducing https://t.co/GGL3ww4Oc0 ](https://x.com/hii_mohit/status/2108809851136815223?s=20)
+
+Posts · X · 11 Oct 2026
+
+**Note:** Video inspiration
+
+---
+
 ### [MetalForge — Shaders for SwiftUI, React Native & Web](https://metalforge.xyz/)
 > Beautiful shaders for SwiftUI, React Native and the web, without writing shader code. Tweak sliders, then take the code: a real .metal file, a Skia shader or a web component.
 
