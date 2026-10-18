@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-18T22:46:50",
+  "updatedAt": "2026-10-18T22:51:58",
   "items": [
     {
       "id": "1f654a304d",
@@ -63,6 +63,71 @@
           "branding": 0.36,
           "writing style": 0.02,
           "careers": 0.02
+        }
+      },
+      "shelfSource": "jev"
+    },
+    {
+      "id": "b1c25f6e18",
+      "url": "https://deslopify.studio/",
+      "type": "article",
+      "title": "Deslopify | Ugly App In. Beautiful App Out.",
+      "description": "Send screenshots of your app. Get them back beautiful, in days not months.",
+      "note": "website inspiration",
+      "source": "deslopify.studio",
+      "host": "deslopify.studio",
+      "image": "https://deslopify.studio/assets/og-v2.jpg",
+      "screenshot": "",
+      "savedAt": "2026-10-18",
+      "shelf": "inspiration",
+      "topic": "design",
+      "tags": [
+        "mobile app"
+      ],
+      "classifiedBy": "jev",
+      "needsReview": false,
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "reading": 0.0,
+          "post": 0.0,
+          "inspiration": 1.0,
+          "tool": 0.0
+        },
+        "topic": {
+          "ai": 0.0,
+          "engineering": 0.0,
+          "design": 1.0,
+          "startups": 0.0,
+          "craft": 0.0,
+          "writing": 0.0,
+          "money": 0.0,
+          "other": 0.0
+        },
+        "tags": {
+          "onboarding": 0.25,
+          "empty states": 0.06,
+          "landing page": 0.07,
+          "mobile app": 0.9,
+          "typography": 0.1,
+          "icons": 0.04,
+          "illustration": 0.15,
+          "animation": 0.27,
+          "design system": 0.1,
+          "ui patterns": 0.12,
+          "prompting": 0.03,
+          "ai agents": 0.1,
+          "coding tools": 0.02,
+          "claude": 0.11,
+          "open source": 0.06,
+          "essay": 0.01,
+          "productivity": 0.05,
+          "learning": 0.09,
+          "founders": 0.05,
+          "ideas": 0.05,
+          "branding": 0.47,
+          "writing style": 0.01,
+          "careers": 0.03
         }
       },
       "shelfSource": "jev"

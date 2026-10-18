@@ -1,5 +1,15 @@
 # Design
 
+### [Deslopify | Ugly App In. Beautiful App Out.](https://deslopify.studio/)
+> Send screenshots of your app. Get them back beautiful, in days not months.
+
+Inspiration · deslopify.studio · 18 Oct 2026
+Tags: mobile app
+
+**Note:** website inspiration
+
+---
+
 ### [introducing https://t.co/GGL3ww4Oc0 ](https://x.com/hii_mohit/status/2108809851136815223?s=20)
 
 Posts · X · 11 Oct 2026

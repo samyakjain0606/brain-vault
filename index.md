@@ -1,10 +1,11 @@
 # Brain Vault
 
-29 things worth keeping. Browse them on the site, or here.
+30 things worth keeping. Browse them on the site, or here.
 
 | Saved | Title | Shelf | Topic | Note |
 |-------|-------|-------|-------|------|
 | 18 Oct 2026 | [AI Screenshots & App Mockups for Mac](https://moonjar.ai/) | Inspiration | AI and agents | inspiration for website design |
+| 18 Oct 2026 | [Deslopify \| Ugly App In. Beautiful App Out.](https://deslopify.studio/) | Inspiration | Design | website inspiration |
 | 11 Oct 2026 | [introducing https://t.co/GGL3ww4Oc0 ](https://x.com/hii_mohit/status/2108809851136815223?s=20) | Posts | Design | Video inspiration |
 | 6 Oct 2026 | [Recommended reading/viewing](https://mariozechner.at/recommended-reading/) | Reading | Work and craft |  |
 | 6 Oct 2026 | [Startup & Product Launch Videos from X](https://whatships.com/) | Tools | Startups and product |  |
