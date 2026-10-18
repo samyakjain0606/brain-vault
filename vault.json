@@ -1,7 +1,72 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-11T00:19:45",
+  "updatedAt": "2026-10-18T22:46:50",
   "items": [
+    {
+      "id": "1f654a304d",
+      "url": "https://moonjar.ai/",
+      "type": "article",
+      "title": "AI Screenshots & App Mockups for Mac",
+      "description": "Give your coding agents a studio for app marketing. Create screenshots, device mockups and App Store images with Moonjar for Mac. Join early access.",
+      "note": "inspiration for website design",
+      "source": "moonjar.ai",
+      "host": "moonjar.ai",
+      "image": "https://framerusercontent.com/images/p2oBHB8TBrj8GdVxYeRdWFkczMs.jpg",
+      "screenshot": "",
+      "savedAt": "2026-10-18",
+      "shelf": "inspiration",
+      "topic": "ai",
+      "tags": [
+        "ai agents"
+      ],
+      "classifiedBy": "jev",
+      "needsReview": false,
+      "jev": {
+        "model": "jev-1.13.0",
+        "shelf": {
+          "reading": 0.0,
+          "post": 0.0,
+          "inspiration": 1.0,
+          "tool": 0.0
+        },
+        "topic": {
+          "ai": 0.86,
+          "engineering": 0.0,
+          "design": 0.14,
+          "startups": 0.0,
+          "craft": 0.0,
+          "writing": 0.0,
+          "money": 0.0,
+          "other": 0.0
+        },
+        "tags": {
+          "onboarding": 0.03,
+          "empty states": 0.03,
+          "landing page": 0.1,
+          "mobile app": 0.57,
+          "typography": 0.13,
+          "icons": 0.04,
+          "illustration": 0.32,
+          "animation": 0.37,
+          "design system": 0.08,
+          "ui patterns": 0.1,
+          "prompting": 0.11,
+          "ai agents": 0.92,
+          "coding tools": 0.13,
+          "claude": 0.48,
+          "open source": 0.02,
+          "essay": 0.01,
+          "productivity": 0.17,
+          "learning": 0.07,
+          "founders": 0.02,
+          "ideas": 0.08,
+          "branding": 0.36,
+          "writing style": 0.02,
+          "careers": 0.02
+        }
+      },
+      "shelfSource": "jev"
+    },
     {
       "id": "0db632a8b0",
       "url": "https://x.com/hii_mohit/status/2108809851136815223?s=20",
