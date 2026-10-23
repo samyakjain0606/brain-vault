@@ -1,5 +1,13 @@
 # AI and agents
 
+### [Brownfield Agentic Engineering](https://addyosmani.com/blog/brownfield-agentic-engineering/)
+> What it takes to run agents in a codebase older than the team
+
+Reading · addyosmani.com · 23 Oct 2026
+Tags: ai agents, learning
+
+---
+
 ### [AI Screenshots & App Mockups for Mac](https://moonjar.ai/)
 > Give your coding agents a studio for app marketing. Create screenshots, device mockups and App Store images with Moonjar for Mac. Join early access.
 

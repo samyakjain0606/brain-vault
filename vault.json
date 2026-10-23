@@ -1,7 +1,73 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-18T22:51:58",
+  "updatedAt": "2026-10-23T16:15:45",
   "items": [
+    {
+      "id": "fccabe30e4",
+      "url": "https://addyosmani.com/blog/brownfield-agentic-engineering/",
+      "type": "article",
+      "title": "Brownfield Agentic Engineering",
+      "description": "What it takes to run agents in a codebase older than the team",
+      "note": "",
+      "source": "addyosmani.com",
+      "host": "addyosmani.com",
+      "image": "https://addyosmani.com/assets/images/brownfield-agentic-engineering/11.webp",
+      "screenshot": "",
+      "savedAt": "2026-10-23",
+      "shelf": "reading",
+      "topic": "ai",
+      "tags": [
+        "ai agents",
+        "learning"
+      ],
+      "classifiedBy": "jev",
+      "needsReview": false,
+      "jev": {
+        "model": "jev-1.14.0",
+        "shelf": {
+          "reading": 1.0,
+          "post": 0.0,
+          "inspiration": 0.0,
+          "tool": 0.0
+        },
+        "topic": {
+          "ai": 0.82,
+          "engineering": 0.18,
+          "design": 0.0,
+          "startups": 0.0,
+          "craft": 0.0,
+          "writing": 0.0,
+          "money": 0.0,
+          "other": 0.0
+        },
+        "tags": {
+          "onboarding": 0.02,
+          "empty states": 0.01,
+          "landing page": 0.01,
+          "mobile app": 0.01,
+          "typography": 0.01,
+          "icons": 0.01,
+          "illustration": 0.03,
+          "animation": 0.01,
+          "design system": 0.02,
+          "ui patterns": 0.01,
+          "prompting": 0.1,
+          "ai agents": 0.97,
+          "coding tools": 0.43,
+          "claude": 0.03,
+          "open source": 0.04,
+          "essay": 0.43,
+          "productivity": 0.41,
+          "learning": 0.69,
+          "founders": 0.02,
+          "ideas": 0.04,
+          "branding": 0.02,
+          "writing style": 0.03,
+          "careers": 0.13
+        }
+      },
+      "shelfSource": "jev"
+    },
     {
       "id": "1f654a304d",
       "url": "https://moonjar.ai/",
